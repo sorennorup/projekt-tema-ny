@@ -106,7 +106,6 @@ class PostView {
 			 	$count++;	
 		}
 ?>
-test
 		</ul>
 		<!-- Renders all the posts with a certain category -->
 	 	<div id = "post-view"></div> 
