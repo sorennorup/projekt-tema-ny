@@ -150,13 +150,16 @@ function get_ajax_posts() {
 function displayTimelineLinks($posts){
 	global $post;
 	$arr = array();
-	getPostTimeline($support_shortcode);
+	getPostTimeline();
 	$output .= '<div class = "timeline-view">';
 	foreach( $posts as $post ): setup_postdata( $post );
+	
 		$output .= '<div class = "col-lg-4 mb-4">';
-		$output .= '<a class = "get-timeline" href="'.$post->guid.'" title="'.$post->post_title.'">';
+		$output .= '<a id = '.$post->ID.' class = "get-timeline" href="'.$post->guid.'" title="'.$post->post_title.'">';
 		  $output .= '<h6>'.$post->post_title.' </h6>';
-		  $support_shortcode = apply_filters('the_content', get_the_content());
+		  $support_shortcode = apply_filters('the_content', the_content() );
+		  $output .= '<input id = "content" type =" hidden">'.$support_shortcode.'</input>';
+		
 		  $output .= '<div id = "t-view"></div>';	
 		  
 		$output.= '</a> </div>';
@@ -166,16 +169,22 @@ function displayTimelineLinks($posts){
 	return $output;
 }
 
-function getPostTimeline($cont){
+function getPostTimeline(){
 	global $post;
+     
 	
 	?>
 	<script> 
-	let timeline = <?php echo $cont; ?>
+	let timeline = 'prut';
+
 	 	$('.get-timeline').click(function(e){
+			alert($('#content').html());
+			let id = $(this).attr('id');
+			
+			let postcontent = <?php get_post() ?>
 			 e.preventDefault();
 			// get_ajax_posts function is found in functions.php file
-			$("#t-view").html(timeline);
+			$("#t-view").html(id);
 		 });
 	</script>
 	<?php
