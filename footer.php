@@ -3,7 +3,7 @@
   
     <div class = "row">
       <div  class="col-lg-4 text-center">  <p><br/>&copy; UU DANMARK 2018</p> </div>
-      <div  class="col-lg-4 text-center"> <br/>For mere info. uudk@uudanmark.dk</div>
+      <div  class="col-lg-4 text-center"> <br/>For mere info. EUK@kl.dk</div>
       <div  class="col-lg-4 text-center"> <br/><a href = "https://uudanmark.dk/persondatapolitik/">Læs vores persondatapolitik</a></div>
     </div>
    
