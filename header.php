@@ -52,6 +52,11 @@
 		<div class = "body-for-mobile"> 
 		<?php $imageUrl = "https://ungepåsporet.nu/wp-content/uploads/2018/03/" ?>
 			<div class="jumbotron single-page-header">
+			<video width="100%" preload = "auto" autoplay="autoplay" loop = "true" >
+			<source src="https://ungeipraksis.dk/wp-content/uploads/2020/05/UIP-banner-short.mp4" type="video/mp4">
+ 
+Your browser does not support the video tag.
+</video> 
 			<div class ="button-container">
 				<a class = "btn  btn-secondary shadow-lg cta-btn " href = "<?php echo get_site_url(); ?>/for-virksomheder/">
 			<span class  = "text-uppercase" >For virksomheder</span></a>
