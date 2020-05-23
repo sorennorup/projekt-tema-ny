@@ -50,17 +50,19 @@
 
 		
 		<div class = "body-for-mobile"> 
-		<?php $imageUrl = "https://ungepåsporet.nu/wp-content/uploads/2018/03/" ?>
+		
 			<div class="jumbotron single-page-header">
+				<div style = "width: 100%;height:400px; overflow: hidden; z-index:1;">
 			<video width="100%" preload = "auto" autoplay="autoplay" loop = "true" >
 			<source src="https://ungeipraksis.dk/wp-content/uploads/2020/05/UIP-banner-short.mp4" type="video/mp4">
  
 Your browser does not support the video tag.
 </video> 
+</div>
 			<div class ="button-container">
-				<a class = "btn  btn-secondary shadow-lg cta-btn " href = "<?php echo get_site_url(); ?>/for-virksomheder/">
+				<a class = "header-link"  href = "<?php echo get_site_url(); ?>/for-virksomheder/">
 			<span class  = "text-uppercase" >For virksomheder</span></a>
-		 <a class = "btn  btn-secondary shadow-lg cta-btn " href = "<?php echo get_site_url();?>/parentspage/parents.html"><span class = " text-center text-uppercase ">For forældre</span></a>
+		 <a class = "header-link" href = "<?php echo get_site_url();?>/parentspage/parents.html"><span class = " text-center text-uppercase ">For forældre</span></a>
 		</div>
 		<div class = "col-xs-12">
 			<div class = "overlay"></div>

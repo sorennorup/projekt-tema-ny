@@ -179,7 +179,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	display:inline;
 	position: fixed;
 	z-index:5;
-	top:10px;
+	top:30px;
 	right:70px;
 	color: #fff;
 }
@@ -193,6 +193,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	z-index:999;
 	width: 100%;
 	text-align:center;
+	background-color: #333;
 }
 
 .topnav:hover {
@@ -320,17 +321,22 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .jumbotron { 
 	height: 200px;
-	background-image: url("https://ungeipraksis.dk/wp-content/uploads/2018/07/background-blank-business-301703-more-opt.png");
+	/*background-image: url("https://ungeipraksis.dk/wp-content/uploads/2018/07/background-blank-business-301703-more-opt.png");*/
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 0 0;
 }
 
+
 .site-info {
 	width: 30%;
 	margin: 0 auto;
 	margin-top: -50px;
+}
+
+.hero-text {
+	color: #e2e2e2;
 }
 
 .site-info a {
@@ -340,6 +346,9 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .site-info .btn {
 	width: 250px;
+}
+.projekt-logo.img-rounded {
+    width: 200px;
 }
 
 .site-info a:hover {
@@ -354,9 +363,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	position: absolute;
 	
 }
-.project-logo {
-	width: 200px !important;
-}
+
 
 .sb-preview-img:hover{
 	opacity: 0.6;
