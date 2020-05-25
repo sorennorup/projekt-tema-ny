@@ -37,7 +37,7 @@
 <div class="row main-row">
 	
 
-<div class="col-sm-8 main-con ">
+<div class="col-sm-8 main-con content-main ">
 	 
 	
      <?php //if (has_post_thumbnail( $post->ID ) ): ?>

@@ -175,18 +175,22 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	animation: fadein 0.5s forwards;	
 }
 
+
+
 .burger .fa	{
 	display:inline;
 	position: fixed;
 	z-index:5;
 	top:30px;
 	right:70px;
-	color: #fff;
+	color: #000;
 }
 
 .burger .fa:hover {
 	cursor: pointer;
 }
+
+
 
 .topnav	{
 	position: fixed;
@@ -315,20 +319,31 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	position:absolute;
 	top:10px;
 	left:10px;
-	z-index:3;
+	z-index:2;
 	width: 100%;
 }
 
 .jumbotron { 
-	height: 200px;
+	width: 100%;
 	/*background-image: url("https://ungeipraksis.dk/wp-content/uploads/2018/07/background-blank-business-301703-more-opt.png");*/
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 0 0;
+	z-index: -2;
 }
 
+.header-link__container {
+	position: absolute;
+	top: 30px;
+	right: 100px;
+	z-index: 9999;
+	font-size: 11px;
+}
 
+.header-link {
+	margin-right: 20px;
+}
 .site-info {
 	width: 30%;
 	margin: 0 auto;
