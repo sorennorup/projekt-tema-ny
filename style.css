@@ -175,8 +175,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	animation: fadein 0.5s forwards;	
 }
 
-
-
 .burger .fa	{
 	display:inline;
 	position: fixed;
@@ -189,8 +187,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .burger .fa:hover {
 	cursor: pointer;
 }
-
-
 
 .topnav	{
 	position: fixed;
@@ -351,7 +347,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 }
 
 .hero-text {
-	color: #e2e2e2;
+	
 }
 
 .site-info a {
