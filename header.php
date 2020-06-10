@@ -24,8 +24,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
 
-		
-		
 		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="06e7cf7a-c275-4a06-a002-c3faa99d27ab" type="text/javascript" async></script>
 
  	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -40,36 +38,41 @@
 		
 	<body>
 	<div class = 'mobile-body'></div>
-	<header id = "mobile-header">
+	<header id = "header">
+		
+		<div class = "header__left"></div>
+
+		<a class = "header__center" href = "<?php echo get_home_url(); ?>"><img class = "projekt-logo img-rounded" src = "<?php echo get_site_url(); ?>/wp-content/uploads/2018/07/UIP-fin-w300.png"/></a>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<div class = "burger"> <i class="fa fa-bars fa-lg"></i></div>
+		
+		<div class = "burger__background header__right ">
+			<div class = "header-link__container">	
+				<a class = "header-link"  href = "<?php echo get_site_url(); ?>/for-virksomheder/">
+				<span class  = "text-uppercase" >For virksomheder</span></a>
+			 	<a class = "header-link" href = "<?php echo get_site_url();?>/parentspage/parents.html"><span class = " text-center text-uppercase ">For forældre</span></a>
+			</div>
+			<div class = "burger"> <i class="fa fa-bars fa-lg"></i></div>
+		</div>
+		
 		<div style = "display:none;" class="topnav" id="myTopnav"> <div class = 'close-btn'>Luk</div> 
 		 <?php $newmenu->sideBarMenu('Mobil menu'); ?>
 		</div>
 	</header>
-
-		
-		<div class = "body-for-mobile"> 
-		<?php $imageUrl = "https://ungepåsporet.nu/wp-content/uploads/2018/03/" ?>
-			<div class="jumbotron single-page-header">
-			<div class ="button-container">
-				<a class = "btn  btn-secondary shadow-lg cta-btn " href = "<?php echo get_site_url(); ?>/for-virksomheder/">
-			<span class  = "text-uppercase" >For virksomheder</span></a>
-		 <a class = "btn  btn-secondary shadow-lg cta-btn " href = "<?php echo get_site_url();?>/parentspage/parents.html"><span class = " text-center text-uppercase ">For forældre</span></a>
-		</div>
-		<div class = "col-xs-12">
-			<div class = "overlay"></div>
-	</div>
-
-		<div class = "page-title">
-				<a href = "<?php echo get_home_url(); ?>"><img class = "projekt-logo img-rounded" src = "<?php echo get_site_url(); ?>/wp-content/uploads/2018/07/UIP-fin-w300.png"/></a>
-								<div class = "site-info">
-					<!--<a class = "btn btn-primary btn-lg" href = "<?php echo get_site_url(); ?>">Om projektet</a>-->
-
-				</div>
-				
-		</div>
 	
+	<div class = "body-for-mobile"> 
+		<div class="jumbotron single-page-header">
+			<?php if(is_front_page()){ ?>
+				<div class = "video__wrapper" >
+				<video width="100%" preload = "auto" autoplay="autoplay" loop = "true" >
+				<source src="https://ungeipraksis.dk/wp-content/uploads/2020/05/UIP-banner-short.mp4" type="video/mp4">
+ 				Your browser does not support the video tag.
+				</video> 
+				</div>
+			<?php } else { ?>
+				<div class = "video__wrapper" >
+				<img src = "http://ungeipraksis.test/wp-content/themes/Projekt-tema-ny/images/header-img-2.png" width = "100%" />
+			<?php }?>
+			</div>
+		
 	</div>
-
 </div> 
