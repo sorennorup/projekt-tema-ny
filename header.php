@@ -62,16 +62,17 @@
 	<div class = "body-for-mobile"> 
 		<div class="jumbotron single-page-header">
 			<?php if(is_front_page()){ ?>
-				<div style = "width: 100%;height:400px; overflow: hidden; z-index:1;">
+				<div class = "video__wrapper" >
 				<video width="100%" preload = "auto" autoplay="autoplay" loop = "true" >
 				<source src="https://ungeipraksis.dk/wp-content/uploads/2020/05/UIP-banner-short.mp4" type="video/mp4">
  				Your browser does not support the video tag.
 				</video> 
 				</div>
 			<?php } else { ?>
-				<div style = " width: 100%;height:300px; overflow: hidden; z-index:-999;">
+				<div class = "video__wrapper" >
 				<img src = "http://ungeipraksis.test/wp-content/themes/Projekt-tema-ny/images/header-img-2.png" width = "100%" />
 			<?php }?>
-		</div>
+			</div>
+		
 	</div>
 </div> 
