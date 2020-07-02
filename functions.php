@@ -104,9 +104,18 @@ function getLatestPosts(){
 	<?php
 	else: echo "Ingen nyheder at vise";
 	
-	 endif;
-		
+	 endif;	
 }
+
+function getBusiness(){
+	$arg = array(
+		'cat'=> 13
+	);
+	$posts = get_posts($arg);
+	print_r($posts);
+};
+
+add_shortcode('virksomheder','getBusiness');
 
 wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
 	'ajaxurl' => admin_url( 'admin-ajax.php' )
@@ -191,20 +200,14 @@ function displayHTMLView($posts){
 	  $output .= '<a href="'.$post->guid.'" title="'.$post->post_title.'">';
 	  $output .= '<div class = "card card-hover h-100">';
 	  $output .= '<div class = "card-header bg-1"><h6>'.$post->post_title.' </h6></div>';
-			   
-	 
 	  $output .= '<div class = "card-body justify-content-center">';
 		 if ( has_post_thumbnail()) : // Check if thumbnail exists 
 	  $output .= '<div class = "card-img-top text-center " >';
 	  $output .= get_the_post_thumbnail().'</div><br/>';	
-		 endif; 
-			
+		 endif; 	
 	  $output .= '<div class = "card-text loop custom-excerpt-text">';
 	  $output .= html5wp_excerpt('html5wp_index');
-	  $output .= readmore(get_the_permalink($post->ID)).'</div>';	
-
-	  //$output .= '<span class="date">'. get_the_time('F j, Y').'</span>';
-	
+	  $output .= readmore(get_the_permalink($post->ID)).'</div>';		
 	  $output.= '</div></a> </div></div>';
 	
 	 endforeach; 
@@ -345,9 +348,7 @@ if (function_exists('register_sidebar'))
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>'
-	));
-	
-	
+	));	
 }
 
 function arphabet_widgets_init() {

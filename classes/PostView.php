@@ -89,7 +89,7 @@ class PostView {
 	}
 	
 	public function displayAjaxPosts($attr = array()){
-		//print_r($attr);
+		print_r($attr);
 		$output;
 		?> <ul class="nav nav-tabs">     <?php
 		$count = 0;
@@ -115,16 +115,15 @@ class PostView {
 	let view = '<?php echo $attr[0]['view']?>'; 
 	
 	$(document).ready(function(){
-		 $('.first-load').addClass('active');
+		$('.first-load').addClass('active');
 		$.ajax({
 			type: 'POST',
 			url: '<?php echo admin_url('admin-ajax.php');?>',
 			// add data type
 			data: { action : 'get_ajax_posts', cat_id: postID, post_sort: order,time_view: view },
-					success: function( response ) {
-					$("#post-view").html(response).hide().fadeIn(1000);
-					
-				 }
+			success: function( response ) {
+				$("#post-view").html(response).hide().fadeIn(1000);		
+			}
 		});
 	});
 
@@ -146,7 +145,6 @@ class PostView {
 			success: function( response ) {
 			$(id).addClass('active');
 			$("#post-view").html(response).hide().fadeIn(1000);
-			
 			}
 		});
 		});
