@@ -23,7 +23,6 @@
  */
 #header {
 	min-height: 150px;
-	max-width: 1236px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
