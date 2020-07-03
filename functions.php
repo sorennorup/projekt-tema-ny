@@ -107,15 +107,23 @@ function getLatestPosts(){
 	 endif;	
 }
 
-function getBusiness(){
+function getBusinesslogos(){
 	$arg = array(
-		'cat'=> 13
+		'cat'=> 13,
+		'posts_per_page' => 40
 	);
+	$output;
 	$posts = get_posts($arg);
-	print_r($posts);
+	foreach($posts as $post){
+		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+	
+		$output .= '<a class = "company-logo" href = "'.get_permalink($post->ID).'"><img src = "'.$url.'" width = "150"/></a>';
+		
+	}
+	return $output;
 };
 
-add_shortcode('virksomheder','getBusiness');
+add_shortcode('virksomheder','getBusinesslogos');
 
 wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
 	'ajaxurl' => admin_url( 'admin-ajax.php' )

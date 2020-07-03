@@ -1,4 +1,40 @@
 
+var i;
+
+$(document).ready(function(){
+	var time = 3000;
+	$('.company-logo').hide();
+	company_logos(0,7);
+	setTimeout(init,time);
+});
+
+function init(){
+	company_logos(7,18);	
+}
+
+function company_logos(start,end){
+	$('.company-logo').hide();
+	$logos = $('.company-logo');
+	let num = $('.company-logo').length;
+	for(var i = 0; i < num){
+}
+
+ $('.company-logo').each(function(){
+		if($(this).index() < end && $(this).index() >= start ) {
+			$(this).show();
+		}
+		else  {
+			$(this).hide();
+		}
+	});
+
+	setTimeout(company_logos,4000);
+	
+}
+
+
+
+
 focus_hovered = $(function(){
 	$('.card-img-top').scroll(function(){
 		$(this).stop().animate({
@@ -101,4 +137,6 @@ moveCtaButtonOnScroll = $( function() {
    
  }
 
-  
+ 
+
+ 

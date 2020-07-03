@@ -411,6 +411,20 @@ a {
 	color: #616d0a;
 }
 
+.company-block {
+    max-width: 1136px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+	justify-items: center;
+	margin-bottom: 40px;
+}
+
+.company-block img {
+	margin-bottom: 10px;
+}
+
 .fact-box {
 	display: flex;
 	width: 100%;
