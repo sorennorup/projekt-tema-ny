@@ -38,9 +38,18 @@ body {
 	color: #3e3e3e;
 	height: 100%;
 	background: #fff;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+	font-family: "Barlow Semi Condensed",sans-serif;
 	overflow-x: hidden;
+	font-size: 1.1rem;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Barlow Semi Condensed",sans-serif !important;
+    font-weight: 200 !important;
+    margin-bottom: 40px;
+}
+
 
 .frontpage p:not(class),
 .frontpage a:not(class), 
@@ -116,7 +125,9 @@ h4 {
 h4,h3 {
 	margin-bottom: 20px;
 }
-
+h2 {
+	font-size: 2.2rem;
+}
 .wp-block-quote {
 	border-left: 4px solid #d89c44;
 	color: #919090;
@@ -416,14 +427,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-items: center;
-	margin-bottom: 40px;
+	
 }
 
-.company-block img {
-	margin-bottom: 10px;
+.company-block-wrapper {
+	height: 120px;
+	margin-bottom: 20px;
+	position: relative;
 }
+
 
 .fact-box {
 	display: flex;
@@ -587,10 +601,6 @@ footer {
 }
 /* End Team membersite styling */
 
-.project-logo{
-	
-}
-
 /******* Overriding the timeline plugin*******/
 .rich_web_timeline_group-title{
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
@@ -628,6 +638,16 @@ section.rich_web_timeline_1_62 > article > div.rich_web_timeline_panel .rich_web
 		float:left;
 		margin-top:10px;
 	}
+
+	.company-block-wrapper {
+		height: 150px;
+		
+	}
+
+	.company-logo{
+		width: 25%;
+		padding: 10px;
+	}
 	
 	.video__wrapper {
 		height: auto;
@@ -635,6 +655,15 @@ section.rich_web_timeline_1_62 > article > div.rich_web_timeline_panel .rich_web
   
 	}
 @media (max-width: 400px) {
+	.company-block-wrapper {
+		height: 250px;
+		width: 100%;
+	}
+
+	.company-logo{
+		width: 45%;
+		padding: 10px;
+	}
 
 	.parents-subpage {
 		padding:10px;

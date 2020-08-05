@@ -1,39 +1,40 @@
 
-var i;
-
+var i = 6;
+var c = 0;
 $(document).ready(function(){
-	var time = 3000;
-	$('.company-logo').hide();
-	company_logos(0,7);
-	setTimeout(init,time);
+	
+	updateView();
 });
 
-function init(){
-	company_logos(7,18);	
-}
-
-function company_logos(start,end){
-	$('.company-logo').hide();
-	$logos = $('.company-logo');
-	let num = $('.company-logo').length;
-	for(var i = 0; i < num){
-}
-
- $('.company-logo').each(function(){
-		if($(this).index() < end && $(this).index() >= start ) {
-			$(this).show();
+function updateView(){
+	console.log('c: '+c);
+	var elements = document.getElementsByClassName('company-logo');
+	var num = elements.length;
+	console.log('number of elements:'+ num);
+	// Hide all elements
+	for(let j = 0; j < num; j++) {
+		elements[j].style.display = "none";
+	}	
+	//pick 6 of the elements
+	while(c <  i) {
+		console.log(c);
+		console.log(i);
+		if(elements[c]!= undefined){
+		elements[c].style.display = "block";
+		elements[c].style.opacity = "0.5";
 		}
-		else  {
-			$(this).hide();
-		}
-	});
-
-	setTimeout(company_logos,4000);
-	
+		c++;
+	}
+	if(i < num){
+		i = i+6;
+	}
+	else {
+		i = 6;
+		c = 0;
 }
-
-
-
+	//run function again
+	setTimeout(updateView,4000);
+}
 
 focus_hovered = $(function(){
 	$('.card-img-top').scroll(function(){
@@ -137,6 +138,5 @@ moveCtaButtonOnScroll = $( function() {
    
  }
 
- 
 
  

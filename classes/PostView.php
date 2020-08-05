@@ -89,7 +89,7 @@ class PostView {
 	}
 	
 	public function displayAjaxPosts($attr = array()){
-		print_r($attr);
+		//print_r($attr);
 		$output;
 		?> <ul class="nav nav-tabs">     <?php
 		$count = 0;
