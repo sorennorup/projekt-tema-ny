@@ -5,40 +5,49 @@
 	let c = 0;
 	let elements;
 	let num;
-
-
+	
 	$(document).ready(function () {
 		$('.company-logo').hide();
 		updateView();
+		var video = document.querySelector('video');
+		var promise = video.play();
+		if (promise !== undefined) {
+			promise.then(_ => {
+				// Autoplay started!
+			}).catch(error => {
+				// Show something in the UI that the video is muted
+				video.muted = true;
+				video.play();
+			});
+		}
 	});
 	
-function updateView(){
-	console.log('c: '+c);
-	console.log('i:'+numberImages);
-	elements = document.getElementsByClassName('company-logo');
-	num = elements.length;
-	console.log('number of elements:'+ num);
-	// Hide all elements
-	for(let j = 0; j < num; j++) {
-		elements[j].style.display = "none";
-	}	
-	//pick 6 of the elements
-	while(c < numberImages  ){
-		
-		if(elements[c]!= undefined){
-		elements[c].style.display = "block";
-		elements[c].style.opacity = "0.5";
+	function updateView(){
+		console.log('c: '+c);
+		console.log('i:'+numberImages);
+		elements = document.getElementsByClassName('company-logo');
+		num = elements.length;
+		console.log('number of elements:'+ num);
+		// Hide all elements
+		for(let j = 0; j < num; j++) {
+			elements[j].style.display = "none";
+		}	
+		//pick 6 of the elements
+		while(c < numberImages  ){
+			if(elements[c]!= undefined){
+			elements[c].style.display = "block";
+			elements[c].style.opacity = "0.5";
+			}
+			c++;
 		}
-		c++;
-	}
-	if(numberImages < elements.length){
-		numberImages += 6;
-	}
+		if(numberImages < elements.length){
+			numberImages += 6;
+		}
 
-	else {
-		numberImages = 6;
-		c = 0;
-}
+		else {
+			numberImages = 6;
+			c = 0;
+	}
 	//run function again
 	setTimeout(updateView,4000);
 }
@@ -57,16 +66,15 @@ focus_hovered = $(function(){
 		});	
 	});
 
-sticky_header = $(function(){
+/*sticky_header = $(function(){
 	
-	$('.sticky-header').hide();
 	   if( $( window ).width() > 600){
 		 $(window).scroll(function(){
 			if($(window).scrollTop()> 200){
 			$('.sticky-header').stop().slideDown();
 		
 			} else {
-				 $('.sticky-header').slideUp().fadeOut();
+				 $('.sticky-header').slideUp();
 			}
 		});
 		 }
@@ -74,16 +82,17 @@ sticky_header = $(function(){
 	});
 
   // get the topposition of the elements after the subheader divs
-  /*function top_off_main_row_class() {
+   function top_off_main_row_class() {
 	 
    //var pos = $('.main-row').offset();
    var pos = document.getElementsByClassName('main-row');
    
    return pos[0].offsetTop;
 
-  }*/
+  }
+  */
   
-  /*function slideInButton(obj){
+  function slideInButton(obj){
 	
    for(var i = 0; i < 2; i++){
 	  obj.stop().animate({
@@ -98,7 +107,7 @@ sticky_header = $(function(){
    }
    
  }
- */
+ 
 
 
  

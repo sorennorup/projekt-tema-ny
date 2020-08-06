@@ -460,14 +460,14 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 
 
  function readmore ($link){
-	 //return '<a style = "color:#DFA551;" class="view-article" href = "'.$link.'">LÃ¦s mere</a>';
+	 //return '<a style = "color:#DFA551;" class="view-article" href = "'.$link.'">Ls mere</a>';
    }
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)
 {
 	global $post;
-	return '... <a style = "color:#DFA551;" class="view-article" href="' . get_permalink($post->ID) . '">' . __('LÃ¦s mere', 'html5blank') . '</a>';
+	return '... <a style = "color:#DFA551;" class="view-article" href="' . get_permalink($post->ID) . '">' . __('Læs mere', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar

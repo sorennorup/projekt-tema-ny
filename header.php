@@ -39,7 +39,7 @@
 		
 	<body>
 	<div class = 'mobile-body'></div>
-	<header id = "header">
+	<header id = "header" class = "sticky-header">
 		
 		<div class = "header__left"></div>
 
@@ -59,14 +59,13 @@
 		 <?php $newmenu->sideBarMenu('Mobil menu'); ?>
 		</div>
 	</header>
-	<?php  $images_array = array('gartner.jpg','Sjælsø-2.jpg','gartner2.jpg');
-		   $rand = rand(0, count($images_array)-1);
-	?>
+	
+	
 	<div class = "body-for-mobile"> 
 		<div class="jumbotron single-page-header">
 			<?php if(is_front_page()){ ?>
 				<div class = "video__wrapper" >
-				<video width="100%" preload = "auto" autoplay="autoplay" loop = "true" >
+				<video class = "video" width="100%" preload = "auto" loop = "true" >
 				<source src="https://ungeipraksis.dk/wp-content/uploads/2020/05/UIP-banner-short.mp4" type="video/mp4">
  				Your browser does not support the video tag.
 				</video> 
