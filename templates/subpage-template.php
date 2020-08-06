@@ -1,4 +1,6 @@
-<?php /* Template Name: Projekt underside */ get_header(); ?>
+<?php /* Template Name: Projekt underside */ 
+
+get_header(); ?>
     <?php $page_id = "ups"?>
 	<main role="main">
 		<!-- section -->

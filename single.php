@@ -34,11 +34,7 @@
 	<?php dynamic_sidebar( 'UPS seneste nyheder' ); ?>
 
     </div>
-		 <div class = "bg-2 card">
-	<?php $myWidget = new Widget();?>
-    <?php $myWidget->displayResourcesWidget() ?>
-
-    </div>
+		
 		 <p><a class = "all-access" href="http://www.adgangforalle.dk/" target="_blank"><img border="0" src="https://ungeipraksis.dk/wp-content/uploads/2019/06/43134-logo.jpg" width="120" height="26" alt="Vil du have teksten på vores hjemmeside læst højt, kan du hente et lille gratis program på www.adgangforalle.dk - (Åbner nyt vindue)"></a>
 </p> <!-- Link til adgangforalle.dk - grafik (slut)  --->
 En del af 
