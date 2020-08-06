@@ -86,6 +86,18 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+function header_hook(){
+	do_action('header_hook');
+}
+
+function randomHeaderImage() {
+	$images_array = array('gartner.jpg','Sjælsø-2.jpg','gartner2.jpg');
+	$rand = rand(0, count($images_array)-1);
+	$html = '<img src = "https://ungeipraksis.dk/wp-content/themes/Projekt-tema/Projekt-tema/images/'.$images_array[$rand].'" width = "100%" />';
+	echo $html;
+}
+
+add_action('header_hook','randomHeaderImage');
 
 function getLatestPosts(){
 	$cat_query_arg = array(
@@ -447,14 +459,14 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 
 
  function readmore ($link){
-	 //return '<a style = "color:#DFA551;" class="view-article" href = "'.$link.'">Læs mere</a>';
+	 //return '<a style = "color:#DFA551;" class="view-article" href = "'.$link.'">LÃ¦s mere</a>';
    }
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)
 {
 	global $post;
-	return '... <a style = "color:#DFA551;" class="view-article" href="' . get_permalink($post->ID) . '">' . __('Læs mere', 'html5blank') . '</a>';
+	return '... <a style = "color:#DFA551;" class="view-article" href="' . get_permalink($post->ID) . '">' . __('LÃ¦s mere', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar

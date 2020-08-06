@@ -59,7 +59,9 @@
 		 <?php $newmenu->sideBarMenu('Mobil menu'); ?>
 		</div>
 	</header>
-	
+	<?php  $images_array = array('gartner.jpg','Sjælsø-2.jpg','gartner2.jpg');
+		   $rand = rand(0, count($images_array)-1);
+	?>
 	<div class = "body-for-mobile"> 
 		<div class="jumbotron single-page-header">
 			<?php if(is_front_page()){ ?>
@@ -69,9 +71,14 @@
  				Your browser does not support the video tag.
 				</video> 
 				</div>
-			<?php } else { ?>
+			<?php } 
+				else {?>
 				<div class = "video__wrapper" >
-				<img src = "http://ungeipraksis.test/wp-content/themes/Projekt-tema-ny/images/header-img-2.png" width = "100%" />
+				<?php header_hook(); ?>
+				
+		
+				
+			    
 			<?php }?>
 			</div>
 		
