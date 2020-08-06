@@ -207,7 +207,7 @@ function displayHTMLView($posts){
 	  $output .= '<div class = "col-lg-4 mb-4">';
 	  $output .= '<a href="'.$post->guid.'" title="'.$post->post_title.'">';
 	  $output .= '<div class = "card card-hover h-100">';
-	  $output .= '<div class = "card-header bg-1"><h6>'.$post->post_title.' </h6></div>';
+	  $output .= '<div class = "card-header bg-1"><h4>'.$post->post_title.' </h4></div>';
 	  $output .= '<div class = "card-body justify-content-center">';
 		 if ( has_post_thumbnail()) : // Check if thumbnail exists 
 	  $output .= '<div class = "card-img-top text-center " >';

@@ -168,7 +168,7 @@ class PostView {
 
 	private function cardHeader($the_title,$style_class){
 		$output = '<div class = "card-header '.$style_class.'">
-				<h6>'. $the_title.' </h6></div>';
+				<h4>'. $the_title.' </h4></div>';
 		return $output;
 	}
 
