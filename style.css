@@ -63,7 +63,20 @@ h1, h2, h3, h4, h5, h6 {
 	margin-right: auto;
 	max-width: 628px;
 }
-ul,li,ol {
+
+.latest li{
+	margin-left:20px;
+	list-style: none;
+	padding: 5px;
+}
+
+.latest li:before {
+	content: "- ";
+	position: absolute;
+	left: 20px;
+}
+
+ul,ol {
 	list-style: circle;
 }
 .overwrite-with figure {
@@ -494,13 +507,7 @@ footer {
 	list-style-type: none;
 }
 
-.latest{
-	margin-left:20px;
-}
 
-.latest li:before {
-	content: "- ";
-}
 
 .card li:hover {
 	background-color: #D9853B;

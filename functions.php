@@ -86,8 +86,8 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
-function header_hook(){
-	do_action('header_hook');
+function jumbotron_hook(){
+	do_action('jumbotron_hook');
 }
 
 function randomHeaderImage() {
@@ -97,11 +97,12 @@ function randomHeaderImage() {
 	echo $html;
 }
 
-add_action('header_hook','randomHeaderImage');
+add_action('jumbotron_hook','randomHeaderImage');
 
 function getLatestPosts(){
 	$cat_query_arg = array(
-		'cat'=> 6
+		'cat'=> 6,
+		'posts_per_page' => 3
 	);
 	$the_query = new WP_Query($cat_query_arg);
 	//print_r($cat_query);
