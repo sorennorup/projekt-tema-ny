@@ -29,8 +29,6 @@
 }
 
 .header__left, .header__center, .header__right {
-	width: 33.33%;
-	text-align: center;
 }
 
 
@@ -42,6 +40,7 @@ body {
 	font-family: "Barlow Semi Condensed",sans-serif;
 	overflow-x: hidden;
 	font-size: 1.1rem;
+	width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

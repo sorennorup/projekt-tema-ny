@@ -1,13 +1,17 @@
 
-var i = 6;
-var c = 0;
-$(document).ready(function(){
+(function() {
 	
-	updateView();
-});
+	var numberImages = 6;
+	var c = 0;
 
+	$(document).ready(function () {
+		$('.company-logo').hide();
+		updateView();
+	});
+	
 function updateView(){
 	console.log('c: '+c);
+	console.log('i:'+numberImages);
 	var elements = document.getElementsByClassName('company-logo');
 	var num = elements.length;
 	console.log('number of elements:'+ num);
@@ -16,25 +20,27 @@ function updateView(){
 		elements[j].style.display = "none";
 	}	
 	//pick 6 of the elements
-	while(c <  i) {
-		console.log(c);
-		console.log(i);
+	while(c < numberImages  ){
+		
 		if(elements[c]!= undefined){
 		elements[c].style.display = "block";
 		elements[c].style.opacity = "0.5";
 		}
 		c++;
 	}
-	if(i < num){
-		i = i+6;
+	if(numberImages < elements.length){
+		numberImages += 6;
 	}
+
 	else {
-		i = 6;
+		numberImages = 6;
 		c = 0;
 }
 	//run function again
 	setTimeout(updateView,4000);
 }
+})();
+
 
 focus_hovered = $(function(){
 	$('.card-img-top').scroll(function(){
@@ -63,66 +69,18 @@ sticky_header = $(function(){
 		 }
 
 	});
-	
-moveCtaButtonOnScroll = $( function() {
-   let button2 = $("#slide-animation2");
-	let row_top = top_off_main_row_class();
-	console.log(row_top);
-	 
-	 $(window).scroll(function(){
-	   
-	   if($(this).scrollTop() > btn2Pos +100 ){
-		  let button2 = $("#slide-animation2");
-		  slideInButton(button2);
-		  $(this).off('scroll');
-		   
-	   }
-  });
-	 
-	 $(window).scroll(function(){
-	
-	 });
-	
-   });
-   
-  
-  slide_in_text = $(function(){
-	// get the topposition of the elements after the subheader divs
-	var row_top = top_off_main_row_class();
-   
-	
-	$(window).load(function(){
-	  
-	   $('.left-widget-text').addClass('onload');
-	   $('.right-widget-text').addClass('onload');
-	   
-		});
-   $(window).scroll(function(){
-		
-	   if($(this).scrollTop() == row_top){
-		  
-		  $('.left-widget-text').addClass('onload');
-		  $('.right-widget-text').addClass('onload');
-	   }
-	   else if($(this).scrollTop()>row_top){
-		  $('.left-widget-text').removeClass('onload');
-		  $('.right-widget-text').removeClass('onload');
-	   }
 
-	  });
-
-	});
   // get the topposition of the elements after the subheader divs
-  function top_off_main_row_class() {
+  /*function top_off_main_row_class() {
 	 
    //var pos = $('.main-row').offset();
    var pos = document.getElementsByClassName('main-row');
    
    return pos[0].offsetTop;
 
-  }
+  }*/
   
-  function slideInButton(obj){
+  /*function slideInButton(obj){
 	
    for(var i = 0; i < 2; i++){
 	  obj.stop().animate({
@@ -137,6 +95,7 @@ moveCtaButtonOnScroll = $( function() {
    }
    
  }
+ */
 
 
  
