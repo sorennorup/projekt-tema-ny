@@ -28,10 +28,6 @@
 	justify-content: center;
 }
 
-.header__left, .header__center, .header__right {
-}
-
-
 body {
 	color: #3e3e3e;
 	height: 100%;
@@ -46,7 +42,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Barlow Semi Condensed",sans-serif !important;
     font-weight: 200 !important;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -103,10 +99,6 @@ a:link, a:visited, a:hover, a:active {
 	100% { -webkit-transform: translateX(100%); }
 }
 
-p {
-	font-size:1.rem;
-}
-
 h1 {
 	text-align: left;
 	font-size:2.5em;
@@ -121,12 +113,10 @@ h4 {
 	font-size: 1.4rem;
 }
 
-h4,h3 {
-	margin-bottom: 20px;
-}
 h2 {
 	font-size: 2.2rem;
 }
+
 .wp-block-quote {
 	border-left: 4px solid #d89c44;
 	color: #919090;
@@ -238,9 +228,10 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .breadcrumb {
 	font-size: 0.8em;
-	background-color: #ECECEA;
+	background-color:transparent;
 	opacity: 0.7;
 	margin-top:0;
+	padding-left: 0;
 }
 
 #post-view {
@@ -639,8 +630,7 @@ section.rich_web_timeline_1_62 > article > div.rich_web_timeline_panel .rich_web
 	}
 
 	.company-block-wrapper {
-		height: 150px;
-		
+		height: 150px;	
 	}
 
 	.company-logo{

@@ -1,8 +1,11 @@
 
 (function() {
 	
-	var numberImages = 6;
-	var c = 0;
+	let numberImages = 6;
+	let c = 0;
+	let elements;
+	let num;
+
 
 	$(document).ready(function () {
 		$('.company-logo').hide();
@@ -12,8 +15,8 @@
 function updateView(){
 	console.log('c: '+c);
 	console.log('i:'+numberImages);
-	var elements = document.getElementsByClassName('company-logo');
-	var num = elements.length;
+	elements = document.getElementsByClassName('company-logo');
+	num = elements.length;
 	console.log('number of elements:'+ num);
 	// Hide all elements
 	for(let j = 0; j < num; j++) {
