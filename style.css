@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 .frontpage p:not(class),
 .frontpage a:not(class), 
 .frontpage h1:not(class), 
-.frontpage h2:not(class), 
+ 
 .frontpage h3:not(class), 
 .frontpage h4:not(class),
  .frontpage ul:not(class),
