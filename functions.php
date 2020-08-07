@@ -18,8 +18,6 @@ function theme_styles() {
    
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
-	
-
 }
 
 function theme_js() {
@@ -223,7 +221,7 @@ function displayHTMLView($posts){
 	  $output .= '<div class = "card-header bg-1"><h4>'.$post->post_title.' </h4></div>';
 	  $output .= '<div class = "card-body justify-content-center">';
 		 if ( has_post_thumbnail()) : // Check if thumbnail exists 
-	  $output .= '<div class = "card-img-top text-center " >';
+	  $output .= '<div class = "card-img-top " >';
 	  $output .= get_the_post_thumbnail().'</div><br/>';	
 		 endif; 	
 	  $output .= '<div class = "card-text loop custom-excerpt-text">';

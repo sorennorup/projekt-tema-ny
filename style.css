@@ -556,9 +556,8 @@ footer {
 }
 
 .card-img-top {
-	width: 100%;
-	border-top-left-radius: calc(.25rem - 1px);
-	border-top-right-radius: calc(.25rem - 1px);
+	height: 80px !important;
+	max-width: 250px !important;
 }
 
 .sb-preview {

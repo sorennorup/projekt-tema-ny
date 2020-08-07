@@ -175,7 +175,7 @@ class PostView {
 	private function cardBody($attr){
 		$output .= '<div class = "card-body justify-content-center">';
 	if ( has_post_thumbnail()) : // Check if thumbnail exists 
-	 	$output .= '<div class = "card-img-top text-center " >';
+	 	$output .= '<div class = "card-img-top " >';
 	 	$output .= get_the_post_thumbnail().'</div>';	
 	endif; 
 		$output .= '<div class = "card-text loop custom-excerpt-text">';
