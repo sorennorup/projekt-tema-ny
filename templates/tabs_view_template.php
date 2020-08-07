@@ -42,10 +42,10 @@
 	if( $post->ID == 1250) {
 		$args = array(  
 			array("id"=>20, "name" => "UU Sjælsø", 'post_sort' => 'ASC', 'view' => 'timeline'),
-			array("id"=>20, "name" => "UU Slagelse", 'post_sort' => 'ASC','view' => 'timeline'),
-			array("id"=>21, "name" => "UU Frederica", 'post_sort' => 'ASC','view' => 'timeline'),
-			array("id"=>22, "name" => "UU Roskilde", 'post_sort' => 'ASC','view' => 'timeline'),
-			array("id"=>23, "name" => "UU Odder Skanderborg",'view' => 'timeline')
+			array("id"=>21, "name" => "UU Slagelse", 'post_sort' => 'ASC','view' => 'timeline'),
+			array("id"=>23, "name" => "UU Frederica", 'post_sort' => 'ASC','view' => 'timeline'),
+			array("id"=>24, "name" => "UU Roskilde", 'post_sort' => 'ASC','view' => 'timeline'),
+			array("id"=>22, "name" => "UU Odder Skanderborg",'view' => 'timeline')
 		);
 	}
 		$postView = new PostView();
