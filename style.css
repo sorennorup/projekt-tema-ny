@@ -134,9 +134,19 @@ h2 {
 	font-size: 2.2rem;
 }
 
+.header-quote {
+	
+	position: absolute;
+	top: 200px;
+	max-width: 500px;
+	color: #e0e0e0;
+	
+	
+	}
+
 .wp-block-quote {
 	border-left: 4px solid #d89c44;
-	color: #919090;
+	
 }
 
 .wp-block-quote::before {
@@ -446,7 +456,6 @@ a {
 	margin-bottom: 20px;
 	position: relative;
 }
-
 
 .fact-box {
 	display: flex;
