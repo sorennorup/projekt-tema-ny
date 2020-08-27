@@ -1,5 +1,83 @@
+(function($, window, document, undefined) {
+	
+     $(document).ready(function(){
+	 	var elSelector = ".wrapp";
+	  var elClassScroll = 'header-wrapper--scrolling',
+	  elClassScrollUp = 'header-wrapper--scrolling-up',
+	  elClassScrollDown = 'header-wrapper--scrolling-down',
+	  elClassScrollPastHeader = 'header-wrapper--scrolling-past-header',
+	  elHeaderHeight = 114,
+	  $element = $(elSelector);
+	  
+	  
+	
+	if (!$element.length) {
+		alert('test')
+	  return true;
+	}
+     
+	var elHeight = 0,
+	  elTop = 0,
+	  $document = $(document),
+	  dHeight = 0,
+	  $window = $(window),
+	  wHeight = 0,
+	  wScrollCurrent = 0,
+	  wScrollBefore = 0,
+	  wScrollDiff = 0,
+	  pageTop = 0;
+   
+	function headerHasAdminbar() {
+	  if ( $('body').hasClass('admin-bar') ) {
+		var adminbarHeight = $('#wpadminbar').height();
+		elTop = adminbarHeight;
+		pageTop = adminbarHeight;
+	  }
+	}
+  
+	$( document ).ready(function() {
+	  headerHasAdminbar();
+	});
+  
+	$(window).on( 'resize', headerHasAdminbar);
+	
+	
+	$window.on('scroll', function() {	
+		
+	elHeight = $element.outerHeight();
+	  dHeight = $document.height();
+	  wHeight = $window.height();
+	  wScrollCurrent = $window.scrollTop();
+	  wScrollDiff = wScrollBefore - wScrollCurrent; // scroll difference. Negative if scrolled down, positive if scrolled up
+	  elTop = parseInt($element.css('top')) + wScrollDiff; // current position plus scroll change
+  
+	  $element.toggleClass(elClassScroll, wScrollCurrent > 0); // toggles scrolling classname
+	  $element.toggleClass(elClassScrollUp, wScrollCurrent > 0 && wScrollDiff > 0); // toggles scrolling up classname
+	  $element.toggleClass(elClassScrollDown, wScrollDiff < 0); // toggles scrolling down classname
+	  $element.toggleClass(elClassScrollPastHeader, wScrollCurrent > elHeaderHeight); // toggles scrolling past header classname
+  
+	  if (wScrollCurrent <= 0) {
+		$element.css('top', pageTop); // scrolled to the very top; element sticks to the top
+	  } else if (wScrollDiff > 0) {
+		$element.css('top', elTop > pageTop ? pageTop : elTop); // scrolled up; element slides in
+	  } else if (wScrollDiff < 0) {
+		$element.css('top', Math.abs(elTop) > elHeight ? -elHeight : elTop); // scrolled down; element slides out
+	  }
+  
+	  wScrollBefore = wScrollCurrent;
+	});
+})
+  
+  })(jQuery, window, document);
+ 
 
-(function() {
+
+ 
+
+
+
+
+;(function() {
 	
 	let numberImages = 6;
 	let c = 0;
@@ -107,7 +185,5 @@ focus_hovered = $(function(){
    }
    
  }
- 
-
 
  

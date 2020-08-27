@@ -29,7 +29,9 @@ function theme_js() {
 	
 	wp_enqueue_script('mobile_nav',get_template_directory_uri() . '/js/mobile-nav.js');
 	wp_enqueue_script('ajax_js',get_template_directory_uri() . '/js/ajax.js');
-	wp_enqueue_script('animations_js',get_template_directory_uri() . '/js/animations.js');
+	
+	wp_register_script('animations_script',get_template_directory_uri() . '/js/animations.js',array('jquery'),1.0 );
+	wp_enqueue_script('animations_script');
 	
 
 }
