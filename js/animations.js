@@ -70,13 +70,6 @@
   
   })(jQuery, window, document);
  
-
-
- 
-
-
-
-
 ;(function() {
 	
 	let numberImages = 6;
@@ -120,9 +113,7 @@
 		}
 		if(numberImages < elements.length){
 			numberImages += 6;
-		}
-
-		else {
+		} else {
 			numberImages = 6;
 			c = 0;
 	}
