@@ -376,6 +376,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	width: 100%;
 	overflow: hidden; 
 	z-index:1;
+	max-height: 500px;
 }
 
 .header-link__container {
@@ -659,6 +660,11 @@ section.rich_web_timeline_1_62 > article > div.rich_web_timeline_panel .rich_web
 /******* End Custom style of the timeline plugin*******/
 
 @media (max-width: 800px) {
+	
+	.header-quote {
+		display: none;
+	}
+
 	.button-container {
 		float:left;
 		margin-top:10px;
