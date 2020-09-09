@@ -298,6 +298,15 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 /******* Forældre og virksonhedsside layout************/
 
+.background {
+	background-color:rgba(3,3,3,0.3);
+	margin-top: 20px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
 .parents-subpage {
 	padding:10px;
 	border-radius: 25px;
@@ -363,7 +372,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
  }
 
  /********* End forældre og virksomhedsidelayout******/
- 
+
 @keyframes fadein {
 	from{opacity:0;}
 	to{opacity:1;}
