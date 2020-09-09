@@ -149,14 +149,11 @@ h2 {
 }
 
 .header-quote {
-	
 	position: absolute;
 	top: 200px;
 	max-width: 500px;
 	color: #e0e0e0;
-	
-	
-	}
+}
 
 .wp-block-quote {
 	border-left: 4px solid #d89c44;
@@ -299,6 +296,8 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	height: 70px;
 }
 
+/******* Forældre og virksonhedsside layout************/
+
 .parents-subpage {
 	padding:10px;
 	border-radius: 25px;
@@ -318,10 +317,53 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	border-radius: 25px;	
 }
 
+.first-col {
+    background-color: #65b790;
+    padding-top:20px;
+    margin-bottom: -20px;
+	height:300px;
+	text-align: center;
+	color: #fff;
+}
+
+.second-col {
+    background-color: #84a27d;
+    padding-top:20px;
+    margin-bottom: -20px;
+	height:300px;
+	text-align: center;
+	color: #fff;
+}
+
+.third-col {
+    background-color: #dfa551;
+    padding-top:20px;
+	height:300px;
+	text-align: center;
+	color: #fff;
+}
+
+.third-col h2, .second-col h2, .first-col h2 {
+	text-align: center;
+	color:  #fff;
+}
+
 .parents-subpage p {
 	padding:10px;
 }
 
+.green{
+	background-color: #65b790;
+	padding:20px;
+	margin-top: 20px;
+ }
+
+ .green h2{
+	 color: #fff !important;
+ }
+
+ /********* End forældre og virksomhedsidelayout******/
+ 
 @keyframes fadein {
 	from{opacity:0;}
 	to{opacity:1;}
