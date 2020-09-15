@@ -582,8 +582,6 @@ footer {
 	list-style-type: none;
 }
 
-
-
 .card li:hover {
 	background-color: #D9853B;
 	color: #333;
@@ -615,9 +613,10 @@ footer {
 .btn {
 	border: 0;
 	font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
-	font-weight: 600;
 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
 	transition: all 0.15s ease-in-out;
+	width: 300px;
+	
 }
 
 .btn-secondary {

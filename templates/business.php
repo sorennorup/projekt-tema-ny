@@ -1,4 +1,5 @@
-<?php /* Template Name: Parents page*/ get_header(); ?>
+<?php /* Template Name: Business page*/ get_header(); ?>
+
 <?php $field_data = get_post_meta(get_the_ID()); 
       $left = $field_data['_text_box1'][0];
       $center = $field_data['_text_box2'][0];
@@ -15,6 +16,7 @@
             Vis mig en ting, og jeg husker det måske. 
             Giv mig en oplevelse, og jeg glemmer det aldrig </br>
             - Søren Kierkegaard </i>
+           
     </blockquote>
     </div>
     <div class = "row nopadding">
@@ -55,16 +57,6 @@
                   
     </div>
     
-    
-            <div class = "row green">
-                <div class = "text-center col-lg-12"><h2 class = "  dark-color">Spørgejørgen på erhvervsuddannelse </h2>
-                <a href = "https://forms.gle/Mb5ysbTBNWwGos4VA" class  = "btn"><p class="text-uppercase button-text ">Test din viden før arrangementet > </p></a>
-               <br/><br/> <a href = "https://forms.gle/SazhFe8rZ3KtGoPq9" class  = "btn"><p class="text-uppercase button-text ">Test din viden efter arrangementet > </p></a>
-                </div>
-                
-                </div>
-                
-            </div>
         <br/>
         
         
@@ -80,6 +72,7 @@
 
           </div> 
          </div><br/>
+        
          
          <div class = "container">
          <div class = "row">
@@ -93,5 +86,8 @@
 
           </div> 
          </div>
+        
 </div>
-    <?php  get_footer();?>
+  
+   <?php get_footer();?>
+  
