@@ -54,17 +54,6 @@
         </div>
                   
     </div>
-    
-    
-            <div class = "row green">
-                <div class = "text-center col-lg-12"><h2 class = "  dark-color">Spørgejørgen på erhvervsuddannelse </h2>
-                <a href = "https://forms.gle/Mb5ysbTBNWwGos4VA" class  = "btn"><p class="text-uppercase button-text ">Test din viden før arrangementet > </p></a>
-               <br/><br/> <a href = "https://forms.gle/SazhFe8rZ3KtGoPq9" class  = "btn"><p class="text-uppercase button-text ">Test din viden efter arrangementet > </p></a>
-                </div>
-                
-                </div>
-                
-            </div>
         <br/>
         
         
@@ -73,8 +62,8 @@
            <div class = "container">
          <div class = "row">
           <div class = "col-sm-4"></div>
-           <div class = "col-sm-2"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/nordea-fonden.png" width = "150" /> </div>
-            <div class = "col-sm-2"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/UU-Danmark-logo.png" width = "150" /></div>
+           <div class = "col-sm-2"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>/partnerlogoer/nordea-fonden.png" width = "150" /> </div>
+            <div class = "col-sm-2"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>/partnerlogoer/UU-Danmark-logo.png" width = "150" /></div>
       
             <div class = "col-sm-4"></div>
 
@@ -84,11 +73,11 @@
          <div class = "container">
          <div class = "row">
           <div class = "col-sm-1"></div>
-           <div class = "bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/Dansk-Byggeri-logo_net.jpg" width = "150" /> </div>
-            <div class = " bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/DE_logo_2016.jpg" width = "150"  /> </div>
-             <div class = " bottom-margin left-margin col-sm-2 mb-5"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/lf-logo-positiv.png" width = "150"  /> </div>
-              <div class = " bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/logo-danske-maritime-Dansk.jpg" width = "150"  /> </div>
-            <div class = " bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "/wp-content/themes/projekt-tema-ny/partnerlogoer/Plastindustrien-logo-for-web-1.png" width = "150"  /> </div>
+           <div class = "bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>/projekt-tema-ny/partnerlogoer/Dansk-Byggeri-logo_net.jpg" width = "150" /> </div>
+            <div class = " bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>/partnerlogoer/DE_logo_2016.jpg" width = "150"  /> </div>
+             <div class = " bottom-margin left-margin col-sm-2 mb-5"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>/partnerlogoer/lf-logo-positiv.png" width = "150"  /> </div>
+              <div class = " bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>partnerlogoer/logo-danske-maritime-Dansk.jpg" width = "150"  /> </div>
+            <div class = " bottom-margin col-sm-2 mb-5"><img class = "img-responsive" src = "<?php echo get_template_directory_uri();?>/partnerlogoer/Plastindustrien-logo-for-web-1.png" width = "150"  /> </div>
             <div class = " col-sm-1 "></div>
 
           </div> 
