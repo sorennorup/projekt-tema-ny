@@ -568,6 +568,10 @@ a {
 	max-width: 33.33%;
 }
 
+.footer-before__row img {
+	width: 100px;
+}
+
 
 
 footer {

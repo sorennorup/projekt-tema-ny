@@ -56,6 +56,7 @@ get_header(); ?>
 
 </div>
 <hr/>
+<?php echo '<h2> Nyheder </h2>'; ?>
 <?php echo do_shortcode('[sc]'); ?>
 <hr/>
 <div class = "footer-before">
