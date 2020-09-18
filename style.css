@@ -161,6 +161,10 @@ h2 {
 	
 }
 
+#media_image-3 {
+	width: 100px;
+}
+
 .wp-block-quote::before {
 	font-size: 50px;
 	content: '"';
@@ -552,6 +556,20 @@ a {
 	margin: 0 auto;
 }
 
+.footer-before {
+	max-width: 1136px;
+	justify-content:space-between;
+	display: flex;
+	flex-basis: content;
+	align-items: center;
+}
+
+.footer-before__row {
+	max-width: 33.33%;
+}
+
+
+
 footer {
 	width: 100%;
 	font-size:0.9em;
@@ -768,11 +786,22 @@ section.rich_web_timeline_1_62 > article > div.rich_web_timeline_panel .rich_web
 		float:left;
 		margin-top:10px;
 		margin-left:2px;
-  }
+  	}
 
 	.jumbotron img{
 		width: 100%;
 	}
+
+
+	.footer-before__row img {
+		width: 80px;
+	}
+
+	.footer-before__row h5 {
+		font-size: 14px;
+	}
+
+	
 	}
 
 @media (max-width: 800px) {

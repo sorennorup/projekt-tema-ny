@@ -1,4 +1,6 @@
-<?php /* Template Name: Test*/ get_header(); ?>
+<?php /* Template Name: Test*/
+      /**Template Post Type: post */
+get_header(); ?>
 
 <?php
 
@@ -33,22 +35,24 @@
 	
   <!-- END PROJEKT MENU-->
   <br/>
-
+  <?php echo  '<h2>'.get_the_title().'</h2>';?>
 <div class="row main-row">
-	
+
 <div class = "col-lg-2"></div>
-<div class="col-sm-8 main-con ">
+<div class="col-sm-9 main-con ">
 	 
 	
      <?php //if (has_post_thumbnail( $post->ID ) ): ?>
 	 <?php //endif; ?>
 	 <div class = "clearfix">
+	 <?php BreadCrumbs::the_breadcrumb(); ?>
+
     <?php the_content();?>
 	</div>
     <hr/>
    
  <div class = "row">
-  <div class="col-lg-12"><h5>Med støtte fra</h5></div>
+  <div class="col-lg-12"><h5>Med støtte fra test</h5></div>
   </div>
 
 <div class = "row">
