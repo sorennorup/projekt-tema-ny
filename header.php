@@ -16,7 +16,6 @@
 		<?php include_once('classes/BreadCrumbs.php'); ?>
 		<?php include_once('elements/CtaButton.php'); ?>
 		<?php include_once('classes/Menu.php'); ?>
-		<?php require_once('classes/CustomField.php');?>
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
