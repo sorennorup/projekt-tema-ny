@@ -74,11 +74,7 @@
 			<?php } 
 				else {?>
 				<div class = "video__wrapper" >
-				<?php jumbotron_hook(); ?>
-				
-		
-				
-			    
+				<?php jumbotron_hook(); ?>    
 			<?php }?>
 			</div>
 		
