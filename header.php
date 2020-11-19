@@ -50,8 +50,8 @@
 		<div class = "burger__background header__right ">
 			<div class = "header-link__container">	
 				<a class = "header-link"  href = "<?php echo get_site_url(); ?>/for-virksomheder/">
-				<span class  = "text-uppercase" >For virksomheder</span></a>
-			 	<a class = "header-link" href = "<?php echo get_site_url();?>/parentspage/parents.html"><span class = " text-center text-uppercase ">For forældre</span></a>
+				<span class  = "text-uppercase" >Til virksomheder</span></a>
+			 	<a class = "header-link" href = "<?php echo get_site_url();?>/foraeldre"><span class = " text-center text-uppercase ">Til forældre</span></a>
 			</div>
 			<div class = "burger"> <i class="fa fa-bars fa-lg"></i></div>
 		</div>
