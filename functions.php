@@ -12,8 +12,7 @@
 
 // Load any external files you have here
 //
-add_action( 'wp_enqueue_scripts', 'theme_js');
-add_action( 'wp_enqueue_scripts', 'theme_styles');
+
 function theme_styles() {
    
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.css' );
@@ -35,6 +34,9 @@ function theme_js() {
 	
 
 }
+
+add_action( 'wp_enqueue_scripts', 'theme_js');
+add_action( 'wp_enqueue_scripts', 'theme_styles');
 
 /*------------------------------------*\
 	Theme Support
@@ -471,11 +473,8 @@ function html5_blank_view_article($more)
 	return '... <a style = "color:#DFA551;" class="view-article" href="' . get_permalink($post->ID) . '">' . __('Læs mere', 'html5blank') . '</a>';
 }
 
-// Remove Admin bar
-function remove_admin_bar()
-{
-	return false;
-}
+
+
 
 // Remove 'text/css' from our enqueued stylesheet
 function html5_style_remove($tag)
@@ -593,7 +592,7 @@ add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove 
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
+//add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images

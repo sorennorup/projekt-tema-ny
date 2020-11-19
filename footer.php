@@ -9,15 +9,8 @@
    
 </footer>
 			<!-- /footer -->
-	<!-- Show the admin links if user is loggedin-->
-	<div class = "admin-links">
-		<?php if(is_user_logged_in()){ ?>
-		<a href = "<?php echo admin_url();?>">Kontrolpanel</a><?php echo ' - ' ?>
-		<?php edit_post_link("Rediger"); echo ' - ' ?>
-		<a href = "<?php echo admin_url('post-new.php?post_type=page');?>">Nyt indlæg</a>
-		<?php }?>
-	</div>
 
+ <?php wp_footer(); ?>
 
 	</body>
 </html>

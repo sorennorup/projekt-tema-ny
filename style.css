@@ -21,6 +21,10 @@
 #d89c44  // Hover color orange
 	
  */
+.admin-bar {
+	display: block;
+}
+
 #header {
 	min-height: 150px;
 	display: flex;
