@@ -287,6 +287,14 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	width: 100%;
 }
 
+.card-text {
+	margin-top: 20px;
+}
+
+.loop p {
+	color: #3e3e3e;
+}
+
 .timeline-view {
 	display: flex;
 	max-width: 700px;

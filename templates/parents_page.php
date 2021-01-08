@@ -83,4 +83,5 @@
           </div> 
          </div>
 </div>
+    <?php echo get_content();?>
     <?php  get_footer();?>

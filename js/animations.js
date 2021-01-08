@@ -27,17 +27,18 @@
 	  wScrollDiff = 0,
 	  pageTop = 0;
    
-	function headerHasAdminbar() {
-	  if ( $('body').hasClass('admin-bar') ) {
-		var adminbarHeight = $('#wpadminbar').height();
-		elTop = adminbarHeight;
-		pageTop = adminbarHeight;
+	  function headerHasAdminbar() {
+		if ( $('body').hasClass('admin-bar') ) {
+		  var adminbarHeight = $('#wpadminbar').height();
+		  elTop = adminbarHeight;
+		  pageTop = adminbarHeight;
+		  alert('test');
+		}
 	  }
-	}
-  
-	$( document ).ready(function() {
-	  headerHasAdminbar();
-	});
+	
+	  $( document ).ready(function() {
+		headerHasAdminbar();
+	  });
   
 	$(window).on( 'resize', headerHasAdminbar);
 	
