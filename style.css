@@ -21,6 +21,9 @@
 #d89c44  // Hover color orange
 	
  */
+
+
+
 .admin-bar {
 	display: block;
 }
@@ -310,7 +313,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 }
 
 .card-header {
-	height: 70px;
+	height: 100px;
 }
 
 /******* Forældre og virksonhedsside layout************/
@@ -389,6 +392,47 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
  }
 
  /********* End forældre og virksomhedsidelayout******/
+
+/***********Podcast layout*****************************/
+.podcast-item {
+	padding: 20px;
+	display: flex;
+	background-color: #e0e0e0;
+	margin-bottom: 20px;
+}
+
+.podcast-item__img {
+	 padding-top: 10px;
+}
+
+.podcast-item__img img {
+	width: 300px;
+}
+
+.podcast-item__text {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+@media (max-width: 700px) {
+	.podcast-item {
+		width: 100%;
+		display: block;
+	}
+
+	.podcast-item__img img {
+		width: 100%;
+	}
+
+	.podcast-item__text {
+		padding: 0;
+	}
+
+}
+
+/***********End Podcast layout*****************************/
+
+
 
 @keyframes fadein {
 	from{opacity:0;}

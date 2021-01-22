@@ -15,7 +15,7 @@ class PostView {
 		foreach( $allposts as $post ): setup_postdata( $post );
 			$count = 1; 
 			$cols = $this->numberOfCols( $attr['colsize'] ); 
-			$output .= '<div class = "col-lg-'.$cols.' mb-2">';
+			$output .= '<div class = "col-lg-'.$cols.' mb-4">';
 			$output .= '<a href="'.get_the_permalink().'" title="'.$post->post_title.'">';
 			$output .= '<div class = "card card-hover h-100">';
 			$output .= $this->cardHeader( $post->post_title,'bg-1' );
@@ -194,8 +194,32 @@ class PostView {
 		$output .= '</div></a></div>';
 		return $output;
 	}
+
+	public function podcastList($attr) {
+		global $post;
+		$attr = shortcode_atts( array( 'cat' => 'default cat '),
+		        $attr,'getpostsoutput' );
+		$args = array( 'category'=> $attr['cat'],'posts_per_page' => -1000);
+		$allpodcast = get_posts( $args ); 
+		
+		$output .=  '<div id="podcast-container">';
+	
+		foreach( $allpodcast as $post ): setup_postdata( $post );
+			$output .= '<div class="podcast-item">';
+			$output .= '<div class="podcast-item__img">';
+				if ( has_post_thumbnail()) : // Check if thumbnail exists 
+					$output .= get_the_post_thumbnail();	
+		   		endif; 
+			$output .= '</div>';
+			$output .= '<div class="podcast-item__text"><h3>'.$post->post_title.'</h3>'.$post->post_content.'</div>';
+			$output.= "</div>";
+		endforeach; 
+		$output .= '</div>';
+		return $output;
+	}
 }
 
 $postview = new PostView();
 add_shortcode( 'getpostsoutput', array( $postview, 'getPostList' ) );
+add_shortcode( 'getpodcasts', array( $postview, 'podcastList' ) );
 ?>

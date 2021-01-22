@@ -94,7 +94,7 @@ function jumbotron_hook(){
 }
 
 function randomHeaderImage() {
-	$images_array = array('gartner.jpg','Sjælsø-2.jpg','gartner2.jpg');
+	$images_array = array('gartner.jpg','Sjælsø-2.jpg','gartner2.jpg','Uddeling-af-kuverter-header.png');
 	$rand = rand(0, count($images_array)-1);
 	$html = '<img src = "https://ungeipraksis.dk/wp-content/themes/Projekt-tema/Projekt-tema/images/'.$images_array[$rand].'" width = "100%" />';
 	echo $html;
@@ -125,16 +125,17 @@ function getLatestPosts(){
 
 function getBusinesslogos(){
 	$arg = array(
-		'cat'=> 13,
+		'cat'=> 27,
 		'posts_per_page' => 100
 	);
 	$output;
 	$posts = get_posts($arg);
 	foreach($posts as $post){
+		if(has_post_thumbnail($post->ID)) {
 		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
 	
 		$output .= '<a class = "company-logo" href = "'.get_permalink($post->ID).'"><img src = "'.$url.'" width = "150"/></a>';
-		
+		}
 	}
 	return $output;
 };
