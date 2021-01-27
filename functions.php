@@ -93,14 +93,6 @@ function jumbotron_hook(){
 	do_action('jumbotron_hook');
 }
 
-function randomHeaderImage() {
-	$images_array = array('gartner.jpg','Sjælsø-2.jpg','gartner2.jpg','Uddeling-af-kuverter-header.png');
-	$rand = rand(0, count($images_array)-1);
-	$html = '<img src = "https://ungeipraksis.dk/wp-content/themes/Projekt-tema/Projekt-tema/images/'.$images_array[$rand].'" width = "100%" />';
-	echo $html;
-}
-
-add_action('jumbotron_hook','randomHeaderImage');
 
 function getLatestPosts(){
 	$cat_query_arg = array(
