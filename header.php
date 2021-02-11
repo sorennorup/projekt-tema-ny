@@ -51,7 +51,7 @@
 		
 		<div class = "burger__background header__right ">
 			<div class = "header-link__container">	
-				<a class = "header-link"  href = "<?php echo get_site_url(); ?>/for-virksomheder/">
+				<a class = "header-link"  href = "<?php echo get_site_url(); ?>/til-virksomheder/">
 				<span class  = "text-uppercase" >Til virksomheder</span></a>
 			 	<a class = "header-link" href = "<?php echo get_site_url();?>/foraeldre"><span class = " text-center text-uppercase ">Til forældre</span></a>
 			</div>

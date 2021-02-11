@@ -80,7 +80,6 @@ class Menu{
    }
 
 	private function isParent($item){
-		
 			if ($item->menu_item_parent == 0) {
 			return true;
 			}
@@ -90,6 +89,7 @@ class Menu{
 		$menu_list = '<ul class = "'.$ul_class_name.'" class ="menu">';;
 		$menu_list = '<li class = "'.$li_class_name.'">Unge I Praksis </li>';
 
+			 
 		if ($menu_items = $this->getMenu($menu_name)) { 
 			$count = 0;
 			$id_num = 1;

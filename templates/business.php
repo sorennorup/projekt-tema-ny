@@ -32,7 +32,7 @@
                 <?php echo $left?>
             </p>
             <div class = "readmore-block">
-                <a href = "https://ungeipraksis.dk/hvorfor/" class = "btn padding-btm center  btn-lg">læs mere</a>
+                <a href = "https://ungeipraksis.dk/hvorfor-blive-praktikvaert/" class = "btn padding-btm center  btn-lg">læs mere</a>
             </div>
         </div>
                
@@ -43,7 +43,7 @@
              <?php echo $center;?>
              </p>
             <div class = "readmore-block">
-                <a href = "https://ungeipraksis.dk/hvad/" class = "btn padding-btm btn-lg">læs mere</a>
+                <a href = "https://ungeipraksis.dk/hvad-er-min-opgave-som-praktikvaert/" class = "btn padding-btm btn-lg">læs mere</a>
             </div>
         </div>
                 
@@ -55,7 +55,7 @@
                 <?php echo $right;?>
             </p>
             <div class = "readmore-block">
-                <a href = "https://ungeipraksis.dk/hvordan/" class = "btn padding-btm btn-lg">læs mere</a>
+                <a href = "https://ungeipraksis.dk/hvem-faar-vi-i-praktik/" class = "btn padding-btm btn-lg">læs mere</a>
             </div>
         </div>
                   

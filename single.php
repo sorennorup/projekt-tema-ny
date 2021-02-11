@@ -34,7 +34,7 @@ get_header(); ?>
 	
   <!-- END PROJEKT MENU-->
   <br/>
-  <?php echo  '<h2>'.get_the_title().'</h2>';?>
+  <?php echo  '<div class = "title-wrapper"><h1>'.get_the_title().'</h1></div>';?>
 <div class="row main-row">
 
 <div class = "col-lg-2"></div>
@@ -56,7 +56,7 @@ get_header(); ?>
 
 </div>
 <hr/>
-<?php echo '<h2> Nyheder </h2>'; ?>
+<?php echo '<h1 > Nyheder </h1>'; ?>
 <?php echo do_shortcode('[sc]'); ?>
 <hr/>
 <div class = "footer-before">

@@ -15,7 +15,7 @@
   
   <!-- END PROJEKT MENU-->
 <div class="row">
-      <?php echo '<h3 style = "margin-left:15px;">'.get_the_title().'</h3>';?>
+      <?php echo '<h1 style = "margin-left:15px;">'.get_the_title().'</h1>';?>
 	  
 <div class="col-lg-11 content-main" >
 	      <div class = "row">

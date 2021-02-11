@@ -116,6 +116,7 @@ function getLatestPosts(){
 }
 
 function getBusinesslogos(){
+	$output = "";
 	$arg = array(
 		'cat'=> 27,
 		'posts_per_page' => 100

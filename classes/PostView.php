@@ -3,7 +3,7 @@
 class PostView {
 	  
 	public function getPostList( $attr,$numCols ){
-		$output;
+		$output = "";
 	  	global $post;
 	  	$count = 1;
 	 	$attr = shortcode_atts( array( 'cat' => 'default cat ','colsize'=> 2),
@@ -90,7 +90,7 @@ class PostView {
 	
 	public function displayAjaxPosts($attr = array()){
 		//print_r($attr);
-		$output;
+		$output = "";
 		?> <ul class="nav nav-tabs">     <?php
 		$count = 0;
 		foreach ($attr as $menu_item){
@@ -167,6 +167,7 @@ class PostView {
 	}
 
 	private function cardHeader($the_title,$style_class){
+		$output = "";
 		$output = '<div class = "card-header '.$style_class.'">
 				<h4>'. $the_title.' </h4>';
 				if($attr['cat'] != 8) : 
