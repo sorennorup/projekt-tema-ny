@@ -169,7 +169,7 @@ class PostView {
 	private function cardHeader($the_title,$style_class){
 		$output = "";
 		$output = '<div class = "card-header '.$style_class.'">
-				<h4>'. $the_title.' </h4>';
+				<h3>'. $the_title.' </h3>';
 				if($attr['cat'] != 8) : 
 					$output .= '<span class="date">'. get_the_time('F j, Y').'</span>';
 				endif;

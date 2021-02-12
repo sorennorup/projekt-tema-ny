@@ -23,7 +23,9 @@
            
     </blockquote>
     </div>
+   
     <div class = "row nopadding">
+ 
         <div class=" first-col col-lg-4">
             <h2 class = "text-uppercase">
                 <?php echo $header1; ?>

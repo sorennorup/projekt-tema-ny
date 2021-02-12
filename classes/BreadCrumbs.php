@@ -4,7 +4,7 @@ class BreadCrumbs {
  
    public static function the_breadcrumb() {
 						$parent_name = Category::findParentCategory();
-       
+						
         if (!is_home()) {
             echo '<nav class ="breadcrumb">';
             echo '<a class = "breadcrumb-item" href="';
@@ -12,21 +12,24 @@ class BreadCrumbs {
             echo '">';
             echo 'Forside';
             echo "</a>";
-							 if (is_category() || is_single()) {
+			if(is_page()&& !is_home()) {
+				echo '<a href = "'.wp_get_referer().'/'.'" class = "breadcrumb-item">Forrige</a>';
+			}
+				if (is_category() || is_single()) {
 			
-												echo '<a href = "'.get_site_url().'/'.$parent_name.'" class = "breadcrumb-item">'.$parent_name.'</a>';
+				echo '<a href = "'.get_site_url().'/'.$parent_name.'" class = "breadcrumb-item">'.$parent_name.'</a>';
 		
-							 if (is_single()) {
-												echo '  <span class = "breadcrumb-item">';
-												the_title();
-											echo '</span>';
-							}
-							} elseif (is_page()) {
-			//echo '<p class = "breadcrumb-item">';
-			//echo ' / '.the_title();
-									echo '</p>';
-									}
-								}
+					if (is_single()) {
+						echo '  <span class = "breadcrumb-item">';
+						the_title();
+						echo '</span>';
+					}
+				} elseif (is_page()) {
+			 		echo '<p class = "breadcrumb-item">';
+			 		echo ' / '.the_title();
+					echo '</p>';
+				   }
+			   }
 							elseif (is_tag()) {single_tag_title();}
 							elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
 							elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}

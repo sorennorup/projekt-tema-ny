@@ -39,9 +39,23 @@
 	
      <?php //if (has_post_thumbnail( $post->ID ) ): ?>
 	 <?php //endif; ?>
-	 <div class = "clearfix frontpage">
-    <?php the_content();?>
-	
+	 <?php if( !is_front_page() ): the_title('<h1>','</h1>'); ?>
+	 <?php endif; ?>
+     <div class = "container">
+	 <?php 
+if(!is_front_page()):?>
+     <div class="row main-row">
+	 <div class ="col-lg-2"></div>
+	 <div class="col-sm-8 main-con">
+	<?php BreadCrumbs::the_breadcrumb(); 
+	endif;?>
+	<?php the_content(); ?>
+
+</div>
+	</div>
+    <div class = "col-lg-2"></div>
+	</div>
+	</div>
     <hr/>
    
  <div class = "row">
@@ -61,7 +75,7 @@
 </div>
  
 
-</div>
+
            
 
 				<br class="clear">

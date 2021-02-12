@@ -73,23 +73,14 @@ h5 {
 	margin-bottom: 20px;
 }
 
-.frontpage p:not(class),
-.frontpage a:not(class), 
 
-.frontpage h2:not(class) ,
-.frontpage h3:not(class), 
-.frontpage h4:not(class),
-.frontpage h5:not(class),
-.frontpage ul:not(class),
- .wp-block-image
- {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 628px;
-}
 ul,ol {
 	padding-left: 40px;
 	list-style: circle;
+}
+
+.blocks-gallery-grid, .wp-block-gallery{
+	margin:auto;
 }
 
 .admin-bar {
@@ -102,7 +93,6 @@ ul,ol {
 	align-items: center;
 	justify-content: center;
 }
-
 
 .wrapp {
 	background-color: #fff;
