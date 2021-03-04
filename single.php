@@ -46,7 +46,7 @@ get_header(); ?>
 	 <div class = "clearfix">
 	 <?php BreadCrumbs::the_breadcrumb(); ?>
 
-    <?php the_content();?>
+   <p> <?php the_content();?></p>
 	</div>
 
 

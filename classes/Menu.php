@@ -1,6 +1,6 @@
 <?php
 
-class Menu{
+class Menu {
   private $menu_name;
 	
     public function customMenu($menu_name){

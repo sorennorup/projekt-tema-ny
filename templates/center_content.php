@@ -44,35 +44,21 @@
      <div class = "container">
 	 <?php 
 if(!is_front_page()):?>
-     <div class="row main-row">
-	 <div class ="col-lg-2"></div>
-	 <div class="col-sm-8 main-con">
 	<?php BreadCrumbs::the_breadcrumb(); 
 	endif;?>
-	<?php the_content(); ?>
+	<p><?php the_content(); ?></p>
 
 </div>
 	</div>
-    <div class = "col-lg-2"></div>
+   
 	</div>
 	</div>
     <hr/>
    
- <div class = "row">
-  <div class="col-lg-12"><h5>Med støtte fra</h5></div>
-  </div>
-
-<div class = "row">
-<div class="col-lg-2"><?php dynamic_sidebar( 'UPS sponsorer' ); ?></div>
-<div class="col-lg-4"></div>
-<div class="col-lg-4"></div>
-</div>
-
-    </div>
-
- <div class = "col-lg-2"></div>
+ <div class = "pre-footer"><span>Med støtte fra </span><?php dynamic_sidebar( 'UPS sponsorer' ); ?></div>
  
-</div>
+
+
  
 
 

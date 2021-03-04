@@ -25,9 +25,9 @@ class BreadCrumbs {
 						echo '</span>';
 					}
 				} elseif (is_page()) {
-			 		echo '<p class = "breadcrumb-item">';
+			 		echo '<span class = "breadcrumb-item">';
 			 		echo ' / '.the_title();
-					echo '</p>';
+					echo '</span>';
 				   }
 			   }
 							elseif (is_tag()) {single_tag_title();}

@@ -19,6 +19,7 @@
 <div class="col-lg-12 content-main" >
 	<div class = "row">
 		<div class = "container mb-4">
+		<?php BreadCrumbs::the_breadcrumb(); ?>
 			<?php the_content(); ?>
 		</div>
 		<?php  $args = array();?>

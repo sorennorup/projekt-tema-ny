@@ -18,6 +18,7 @@
 		<?php include_once('elements/CtaButton.php'); ?>
 		<?php include_once('classes/Menu.php'); ?>
 		<?php include_once('classes/Gallery.php'); ?>
+		<?php include_once('classes/SubMenuBox.php'); ?>
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
