@@ -77,7 +77,10 @@
 			<?php } 
 				else {?>
 				<div class = "video__wrapper" >
-				<?php jumbotron_hook(); ?>    
+				<?php $cat =  get_the_category(get_the_id()); ?>
+				<?php jumbotron_hook(); ?>   
+				
+				<div style = "display: flex; align-items: center; width: 100%;color: #fff; position: absolute; top: 30%; z-index:998; font-size: 90px;"><?php  echo '<p style = "margin:0 auto;">'.$cat[0]->name.'</p>'; ?></div>
 			<?php }?>
 			</div>
 		
