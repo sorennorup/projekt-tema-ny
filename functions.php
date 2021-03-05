@@ -86,6 +86,11 @@ if (function_exists('add_theme_support'))
 	load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
 
+function enable_page_excerpt() {
+	add_post_type_support('page', array('excerpt'));
+  }
+  add_action('init', 'enable_page_excerpt');
+
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/

@@ -4,7 +4,7 @@ class SubMenuBox {
 
     public function menuBox($attr) {
         global $post;
-        $attr = shortcode_atts( array( 'name' => 'default name '),
+        $attr = shortcode_atts( array( 'name' => 'default name','subtitle' => 'skriv '),
 		        $attr,'getsubmenu' );
         $navarray = wp_get_nav_menu_items($attr['name']);
         return $this->setMenuView($navarray);
@@ -12,9 +12,12 @@ class SubMenuBox {
 
     private function setMenuView($arr){
         global $post;
+        
         $output = '<div class = "pre-menu">';
         foreach($arr as $nav) {
-            $output .= '<a class = "column card-hover" href = "'.$nav->url.'"><div class = "layer"></div><h2>'.$nav->title.'</h2><p>Stikord1 - stikord2</p></a>';
+            $excerpt = get_the_excerpt($nav->object_id);
+            $output .= '<a class = "column card-hover" href = "'.$nav->url.'"><div class = "layer"></div><h2>'.$nav->title.'</h2><p>'.$excerpt.'</p></a>';
+            
         }
         
         $output .= '</div>';
