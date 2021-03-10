@@ -104,13 +104,19 @@ ul,ol {
 	justify-content: center;
 }
 
+.wrapper {
+	max-width: 1136px;
+	margin: 0 auto;
+	
+}
+
 .column {
 	/*border: 1px solid rgba(0, 0, 0, 0.125);*/
 	color: #333 !important;
 	padding: 20px;
-	height: 200px;
 	margin-right: 30px;
 	width: 30.33%;
+	min-height: 200px;
 	margin-right: 20px;
 	text-align: center;
 	background-color: #f2f2f2;
@@ -120,7 +126,6 @@ ul,ol {
 .layer {
 	background:rgba(242,242,242);
 	width: 100%;
-	height: 200px;
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -135,6 +140,18 @@ ul,ol {
 	flex-wrap: wrap;
 	margin-left: -30px;
 	margin-right: -30px;
+}
+
+.pre-menu__parents {
+	display: flex;
+    justify-content: center;
+	max-width: 1136px;
+	flex-wrap: wrap;
+
+}
+
+.parents-box {
+	color: #666;
 }
 
 
@@ -297,11 +314,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	transition-duration: 0.6s !important;
 }
 
-.readmore-block a {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1rem;
-}
 
 .text-uppercase.button-text{
 	color: #fff;
