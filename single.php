@@ -34,7 +34,9 @@ get_header(); ?>
 	
   <!-- END PROJEKT MENU-->
   <br/>
-  <?php echo  '<div class = "title-wrapper"><h1>'.get_the_title().'</h1></div>';?>
+  <?php echo  '<div class = "title-wrapper"><h1>'.get_the_title().'</h1>
+  </div>';?>
+   <?php BreadCrumbs::the_breadcrumb(); ?>
 <div class="row main-row">
 
 <div class = "col-lg-2"></div>
@@ -44,7 +46,7 @@ get_header(); ?>
      <?php //if (has_post_thumbnail( $post->ID ) ): ?>
 	 <?php //endif; ?>
 	 <div class = "clearfix">
-	 <?php BreadCrumbs::the_breadcrumb(); ?>
+	
 
    <p> <?php the_content();?></p>
 	</div>

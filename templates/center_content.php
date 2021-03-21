@@ -27,24 +27,18 @@
             
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="container container-height">
-  <!-- PROJEKT MENU-->
-  
-	
-  <!-- END PROJEKT MENU-->
-  <br/>
+			<div class="container">
 
-
-	 
-	
-     <?php //if (has_post_thumbnail( $post->ID ) ): ?>
-	 <?php //endif; ?>
-	 <?php if( !is_front_page() ): the_title('<h1>','</h1>'); ?>
+	 <div class = "container">
+	 <?php if( !is_front_page() ): the_title('<h1>','</h1>');
+	 BreadCrumbs::the_breadcrumb(); 
+	 ?>
+	 </div>
 	 <?php endif; ?>
      <div class = "container">
 	 <?php 
 if(!is_front_page()):?>
-	<?php BreadCrumbs::the_breadcrumb(); 
+	<?php 
 	endif;?>
 	<p><?php the_content(); ?></p>
 
@@ -57,12 +51,6 @@ if(!is_front_page()):?>
    
  <div class = "pre-footer"><span>Med støtte fra </span><?php dynamic_sidebar( 'UPS sponsorer' ); ?></div>
  
-
-
- 
-
-
-           
 
 				<br class="clear">
 	

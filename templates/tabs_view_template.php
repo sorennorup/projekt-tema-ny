@@ -10,12 +10,12 @@
 
 			<!-- article -->
 			
-			<div class="container container-height">
+			<div class="container">
   <!-- PROJEKT MENU-->
   
   <!-- END PROJEKT MENU-->
 <div class="row">
-<?php echo '<h1 style = "margin-left: 15px;">'.get_the_title().'</h1>';?>
+<?php echo '<h1 style = "margin-left: 15px;margin-top:20px;">'.get_the_title().'</h1>';?>
 <div class="col-lg-12 content-main" >
 	<div class = "row">
 		<div class = "container mb-4">

@@ -6,9 +6,9 @@ class PostView {
 		$output = "";
 	  	global $post;
 	  	$count = 1;
-	 	$attr = shortcode_atts( array( 'cat' => 'default cat ','colsize'=> 2),
+	 	$attr = shortcode_atts( array( 'cat' => 'default cat ','colsize'=> 2, 'type' => 'post'),
 		        $attr,'getpostsoutput' );
-		$args = array( 'category'=> $attr['cat'],$attr['colsize'],'posts_per_page' => -1000 );
+		$args = array( 'category'=> $attr['cat'],$attr['colsize'],'posts_per_page' => -1000, 'post_type' => $attr['type'] );
 		$allposts = get_posts( $args ); 
 		$output .= '<div class = "row">';
 	
@@ -169,7 +169,7 @@ class PostView {
 	private function cardHeader($the_title,$style_class){
 		$output = "";
 		$output = '<div class = "card-header '.$style_class.'">
-				<h3>'. $the_title.' </h3>';
+				<h2>'. $the_title.' </h2>';
 				if($attr['cat'] != 8) : 
 					$output .= '<span class="date">'. get_the_time('F j, Y').'</span>';
 				endif;
@@ -178,10 +178,10 @@ class PostView {
 	}
 
 	private function cardBody($attr){
-		$output .= '<div class = "card-body justify-content-center">';
+		$output .= '<div  class = "card-body justify-content-center">';
 	if ( has_post_thumbnail()) : // Check if thumbnail exists 
 	 	
-	 	$output .= get_the_post_thumbnail();	
+	 	$output .=  get_the_post_thumbnail();	
 	endif; 
 		$output .= '<div class = "card-text loop custom-excerpt-text">';
 		$output .= html5wp_excerpt('html5wp_index').'Læs mere';

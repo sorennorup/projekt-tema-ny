@@ -51,11 +51,6 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 		<div class = "burger__background header__right ">
-			<div class = "header-link__container">	
-				<a class = "header-link"  href = "<?php echo get_site_url(); ?>/til-virksomheder/">
-				<span class  = "text-uppercase" >Til virksomheder</span></a>
-			 	<a class = "header-link" href = "<?php echo get_site_url();?>/foraeldre"><span class = " text-center text-uppercase ">Til forældre</span></a>
-			</div>
 			<div class = "burger"> <i class="fa fa-bars fa-lg"></i></div>
 		</div>
 		
@@ -66,25 +61,32 @@
 	
 	
 	<div class = "body-for-mobile"> 
-		<div class="jumbotron single-page-header">
+		
 			<?php if(is_front_page()){ ?>
+				<div class = "header-text__wrapper">
+				<div class = "header-text">
+<h1>Projekt Unge i praksis sender unge i 7. klasse på en rejse ud i arbejdsliv</h1></div>
+				</div>
 				<div class = "video__wrapper" >
-				<video class = "video" width="100%" preload = "auto" loop = "true" >
+				
+				<video class = "video"  preload = "auto" loop = "true" >
 				<source src="https://ungeipraksis.dk/wp-content/uploads/2020/05/UIP-banner-short.mp4" type="video/mp4">
  				Your browser does not support the video tag.
 				</video> 
+				
 				</div>
 			<?php } 
 				else {?>
 				<div class = "video__wrapper" >
 				<?php $cat =  get_the_category(get_the_id()); ?>
 				<?php jumbotron_hook(); ?>   
-				
-				<div style = "display: flex; align-items: center; width: 100%;color: #fff; position: absolute; top: 30%; z-index:998; font-size: 90px;"><?php  echo '<p style = "margin:0 auto;">'.$cat[0]->name.'</p>'; ?></div>
+				<?php if($cat[0]->name!="") : ?>
+				<div class = "header-text__wrapper"><?php  echo '<div class = "header-text"><h1>'.$cat[0]->name.'</h1>'; ?></div></div>
+				<?php endif;?>
 			<?php }?>
 			</div>
 		
 	</div>
-</div> 
+
 
 
