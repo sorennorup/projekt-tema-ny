@@ -55,7 +55,7 @@
 		</div>
 		
 		<div style = "display:none;" class="topnav" id="myTopnav"> <div class = 'close-btn'>Luk</div> 
-		 <?php $newmenu->sideBarMenu('Mobil menu'); ?>
+		 <?php $newmenu->mainDropdownMenu('Mobil menu'); ?>
 		</div>
 	</header>
 	

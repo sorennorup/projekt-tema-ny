@@ -227,6 +227,9 @@ ul,ol {
 	z-index: 2;
 	
 }
+.html5-video-player a {
+	display: none !important;
+}
 
 .content-img {
 	max-width: 668px;
