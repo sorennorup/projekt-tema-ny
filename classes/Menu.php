@@ -4,18 +4,18 @@ class Menu {
   private $menu_name;
 	
     public function customMenu($menu_name){
-					global $post;
-					$navarray = $this->getMenu($menu_name);
-					echo '<ul class="nav nav-tabs main-menu ">';
+		global $post;
+		$navarray = $this->getMenu($menu_name);
+		echo '<ul class="nav nav-tabs main-menu ">';
 		foreach($navarray as $navitem){
-		  if($navitem->post_parent == 0 ){
-	      if($this->isActive($post,$navitem)){
+		  	if($navitem->post_parent == 0 ){
+	      		if($this->isActive($post,$navitem)){
 					echo ' <li class="nav-item active-this">';
-		 }
-?>	  <a class="nav-link active"  href="<?php echo $navitem->url; ?>">
-					<?php  echo $navitem->title; ?>
-					<?php  echo ' </a> </li>'; 
-		 }  
+				}
+?>	  			<a class="nav-link active"  href="<?php echo $navitem->url; ?>">
+				<?php  echo $navitem->title; ?>
+				<?php  echo ' </a> </li>'; 
+		 	}  
 		} 
 					echo '<div style = "position:absolute;left:0;z-index:-1;" id = "sub-menu-container">';
 					$this->displaySubmenuItems();
@@ -23,6 +23,16 @@ class Menu {
 					echo '</ul>';
 	}
     
+	public function AdvancedBurgerMenu($menu_name){
+		echo '<div class = "nav-menu-outer">'. $this->clean_custom_main_menu(
+					$menu_name,
+					'nav-inner',
+					'nav-item-mobile',
+					'animate-mobile-item',
+					'nav-inner-children'
+		);
+		echo '</div>';
+	}
 	
 
     public function sidebarMenu($menu_name){
@@ -86,83 +96,76 @@ class Menu {
 		}
 
 	private function clean_custom_main_menu($menu_name,$ul_class_name,$li_class_name,$animate_class,$sub_list) {
-		$menu_list = '<ul class = "'.$ul_class_name.'" class ="menu">';;
-		$menu_list = '<li class = "'.$li_class_name.'">Unge I Praksis </li>';
-
-			 
+    	$menu_list = '<nav class = "'.$ul_class_name.'" class ="menu">';
 		if ($menu_items = $this->getMenu($menu_name)) { 
 			$count = 0;
 			$id_num = 1;
 			$submenu = false;
 			$parent_id = 0;
 			$previous_item_has_submenu = false;
+				foreach ((array) $menu_items as $key => $menu_item) {
+					$title = $menu_item->title;
+					$url = $menu_item->url;
+					// object_id is the id of the post that belongs the menu item
+					$id = $menu_item->object_id;
+					// check if it's a top-level item
+					if ($this->isParent($menu_item)) {
+						$parent_id = $menu_item->ID;
+						// If the next item is not parent, then this menuitem show the menutitle without a "href" attribute
+						if(!$this->isParent($menu_items[$count+1])){
+		  				 // write the item but DON'T close the A or LI until we know if it has children!
+							$menu_list .='<div id = "'.$id_num.'" class = "'.$li_class_name.' parent-item '.$animate_class.' no-hover-background"><a class = "parent-link "><a href = "'.$url.'" class = "parent_link '.$animate_class.'"> '. $title;
+							$id_num++;
+						}
+					// If the next item is parent then give the title a link
+					elseif($this->isParent($menu_items[$count+1])){
+						$menu_list .='<div class = "'.$li_class_name.' parent-item '.$animate_class.' no-link-color"><a href = "'.$url.'" class = "parent_link '.$animate_class.'">  '. $title;
+					}
+				}
+	
+				// if this item has a (nonzero) parent ID, it's a second-level (child) item
+				else {
+					if ( !$submenu ) { // first item
+						// add the dropdown arrow to the parent
+						$menu_list .= '</a>';
+						// start the child list
+						$submenu = true;
+						$previous_item_has_submenu = true;
+						$menu_list .= '<div class="sub '.$sub_list.'">';
+		   			}
 
-			foreach ((array) $menu_items as $key => $menu_item) {
-				
-				$title = $menu_item->title;
-            	$url = $menu_item->url;
-				// object_id is the id of the post that belongs the menu item
-				$id = $menu_item->object_id;
-				// check if it's a top-level item
-            if ($this->isParent($key)) {
-                $parent_id = $menu_item->ID;
-				// If the next item is not parent, then this menuitem show the menutitle without a "href" attribute
-				if(!$this->isParent($menu_items[$count+1])){
-               // write the item but DON'T close the A or LI until we know if it has children!
-                $menu_list .='<li id = "'.$id_num.'" class = "'.$li_class_name.' parent-item '.$animate_class.' no-hover-background"><a class = "parent-link ">'. $title;
-								$id_num++;
-								}
-								// If the next item is parent then give the title a link
-								elseif($this->isParent($menu_items[$count+1])){
-								 $menu_list .='<li class = "'.$li_class_name.' parent-item '.$animate_class.'"><a href = "'.$url.'" class = "parent_link '.$animate_class.'">'. $title;
-								}
-            }
-						
-						
+					$menu_list .= '<div class = "'.$li_class_name.' sub-item">';
+					$menu_list .= '<a id = '.$id.' href="'.$url.'" class="title">'.$title.'</a>';
+					$menu_list .= '</div>';
 
-            // if this item has a (nonzero) parent ID, it's a second-level (child) item
-            else {
-                if ( !$submenu ) { // first item
-                    // add the dropdown arrow to the parent
-                    $menu_list .= '<span class=" hassub arrow-down "><img src = "https://ungemedkant.dk/wp-content/uploads/2018/09/arrow_new_color.png"/></span></a>';
-                    // start the child list
-                    $submenu = true;
-                    $previous_item_has_submenu = true;
-                    $menu_list .= '<ul class="sub '.$sub_list.'">';
-               }
+					// if it's the last child, close the submenu code
+					if ( $menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ){
+					$menu_list .= '</div></div>';
+					$submenu = false;
+				}
+		}
 
-                $menu_list .= '<li class = "'.$li_class_name.' sub-item">';
-                $menu_list .= '<a id = '.$id.' href="'.$url.'" class="title">'.$title.'</a>';
-                $menu_list .= '</li>';
+		// close the parent (top-level) item
+		if (empty($menu_items[$count + 1]) || $menu_items[ $count + 1 ]->menu_item_parent != $parent_id )
+		{
+		   if ($previous_item_has_submenu)
+			{
+				// the a link and list item were already closed
+				$previous_item_has_submenu = false; //reset
+			}
+			else {
+				// close a link and list item
+				$menu_list .='</a></div>';
+			}
+		}
 
-                // if it's the last child, close the submenu code
-                if ( $menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ){
-                    $menu_list .= '</ul></li>';
-                    $submenu = false;
-                }
-            }
-
-            // close the parent (top-level) item
-            if (empty($menu_items[$count + 1]) || $menu_items[ $count + 1 ]->menu_item_parent != $parent_id )
-            {
-               if ($previous_item_has_submenu)
-                {
-                    // the a link and list item were already closed
-                    $previous_item_has_submenu = false; //reset
-                }
-                else {
-                    // close a link and list item
-                    $menu_list .='</a></li>';
-                }
-            }
-
-            $count++;
-        }
-    } else {
-         $menu_list .= '<!-- no list defined -->';
-    }
-    $menu_list .= '</ul>';
-    return $menu_list;
+		$count++;
+	}
+} else {
+	 $menu_list .= '<!-- no list defined -->';
+}
+$menu_list .= '</nav>';
+return $menu_list;
 }
 
 }

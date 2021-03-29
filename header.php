@@ -50,13 +50,17 @@
 		<a class = "header__center" href = "<?php echo get_home_url(); ?>"><img class = "projekt-logo img-rounded" src = "<?php echo get_site_url(); ?>/wp-content/uploads/2018/07/UIP-fin-w300.png"/></a>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+	
+
+		
 		<div class = "burger__background header__right ">
 			<div class = "burger"> <i class="fa fa-bars fa-lg"></i></div>
 		</div>
 		
 		<div style = "display:none;" class="topnav" id="myTopnav"> <div class = 'close-btn'>Luk</div> 
-		 <?php $newmenu->mainDropdownMenu('Mobil menu'); ?>
+		 <?php $newmenu->AdvancedBurgerMenu('Mobil menu'); ?>
 		</div>
+		
 	</header>
 	
 	

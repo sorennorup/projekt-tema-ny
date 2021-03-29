@@ -1,5 +1,32 @@
 var $ = jQuery;
 
+mobileMenu = $(function(){
+	$('.icon').click(function(){
+	  
+	  $(".header-menu").addClass('responsive');
+	  
+	  });
+
+ });
+  function subMenuSlideDown(menu_obj,tempo){
+	menu_obj.stop().slideDown(tempo).show().removeClass('folded').addClass('unfolded');
+	
+  }
+   
+  function subMenuSlideUp(menu_obj,tempo){
+	menu_obj.stop().slideUp(tempo).removeClass('unfolded').addClass('folded');
+	
+  }
+   
+  function arrowPoint(direction,obj){
+	 if(direction == 'down'){
+	   $(obj).find('span').removeClass('arrow-up').addClass('arrow-point-down');
+	 }
+	   else if(direction == 'up'){
+		 $(obj).find('span').removeClass('arrow-point-down').addClass('arrow-up');
+	   }
+	 }
+
 ctaButtonSlideIn = $(function(){
 			let button = $("#slide-animation");
 			slideInButton(button);
