@@ -102,7 +102,7 @@ function jumbotron_hook(){
 function getLatestPosts(){
 	$cat_query_arg = array(
 		'cat'=> 6,
-		'posts_per_page' => 3
+		'posts_per_page' => 4
 	);
 	$the_query = new WP_Query($cat_query_arg);
 	//print_r($cat_query);
@@ -647,6 +647,41 @@ function create_post_type_html5()
 		) // Add Category and Post Tags support
 	));
 }
+ 
+function cont_callback($post) {
+	$res = get_post_meta( $post->ID,'_meta_answer',true);
+	$selected = ' selected="selected" ';
+	echo '<label for="use thumb for hero">';
+	_e( 'Vælg', 'myplugin_textdomain' );
+	echo '</label> ';
+	?>
+   <select name="answer" id="answer">;
+		<option value = "0" <?php if($res=='0') echo $selected;?>>Dont use thumb</option>
+		<option value = "1" <?php if($res=='1') echo $selected; ?> >Use thumb</option>
+	</select>
+	<?php 
+   }
+
+function add_box(){
+    $screens = array('post','page');
+	add_meta_box(
+           "box_id",
+           "Brug thumb som hero",
+           "cont_callback",
+           $screens,
+		   "side",
+		   "core",
+		   null
+       );
+   }
+
+add_action('add_meta_boxes', 'add_box');
+add_action('save_post','save_post_meta');
+
+  function save_post_meta($post_id) {
+	$ans = sanitize_text_field( $_POST['answer']);
+	update_post_meta( $post_id, '_meta_answer', $ans);
+  }
 
 function my_tiny_mce_before_init( $in ) {
 

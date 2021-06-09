@@ -1,0 +1,97 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+   position: relative;
+   color: #3e3e3e;
+   height: 100%;
+   background: #fff;
+   /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+   font-family: "Barlow Semi Condensed",sans-serif;
+   overflow-x: hidden;
+   font-size: 1.1rem;
+   width: 100%;
+}
+
+a {
+   color: #616d0a;
+}
+
+a:hover, a:active {
+   text-decoration: none;
+   color: #d89c43;
+}
+
+p,h2,h3,h4,h5, figure {
+   max-width: 668px;
+   margin: 20px auto;
+}
+
+ul:not(.list-group-item,.nav-tabs),ol:not(.list-group-item,.nav-tabs),li:not(.list-group-item,.nav-tabs) {
+   max-width: 668px;
+   margin: 0 auto;
+}
+
+h1, h2, h3, h4, h6 {
+   font-family: "Barlow Semi Condensed",sans-serif !important;
+   font-weight: 200 !important;
+   
+}
+
+h1 {
+   text-align: left;
+   font-size:2.5em;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+h2 {
+   font-size: 2.0rem;
+}
+
+h3 {
+   font-size: 1.5em;
+}
+
+h4 {
+   font-size: 1.2rem;
+}
+
+h5 {
+   font-family: "Barlow Semi Condensed",sans-serif !important;
+   font-weight: 600;
+}
+
+.wp-block-image figcaption {
+   font-size: 0.9rem;
+}
+/******* If you wanna the text or the header go to the outer left margin */
+.has-text-align-left {
+   max-width: 1136px;
+   margin: 20px auto;
+}
+
+
+ul,ol {
+   padding-left: 40px;
+   list-style: circle;
+}
+
+.admin-bar {
+   display: block;
+}
+.text-center {
+   font-weight:500;
+}
+
+#header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper {
+   max-width: 1136px;
+   margin: 0 auto;
+}

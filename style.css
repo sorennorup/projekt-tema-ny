@@ -21,96 +21,9 @@
 #d89c44  // Hover color orange
 	
  */
- body {
-	color: #3e3e3e;
-	height: 100%;
-	background: #fff;
-	/*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
-	font-family: "Barlow Semi Condensed",sans-serif;
-	overflow-x: hidden;
-	font-size: 1.1rem;
-	width: 100%;
-}
-
-a {
-	color: #616d0a;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-p,h2,h3,h4,h5, figure {
-	max-width: 668px;
-	margin: 20px auto;
-}
-
-ul:not(.list-group-item,.nav-tabs),ol:not(.list-group-item,.nav-tabs),li:not(.list-group-item,.nav-tabs) {
-	max-width: 668px;
-	margin: 0 auto;
-}
-
-h1, h2, h3, h4, h6 {
-    font-family: "Barlow Semi Condensed",sans-serif !important;
-    font-weight: 200 !important;
-	
-}
-
-h1 {
-	text-align: left;
-	font-size:2.5em;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-h2 {
-	font-size: 2.0rem;
-}
-
-h3 {
-	font-size: 1.5em;
-
-}
-
-h4 {
-	font-size: 1.2rem;
-
-}
-
-h5 {
-	font-family: "Barlow Semi Condensed",sans-serif !important;
-	font-weight: 600;
-}
-/******* If you wanna the text or the header go to the outer left margin */
-.has-text-align-left {
-	max-width: 1136px;
-	margin: 20px auto;
-}
-
-
-ul,ol {
-	padding-left: 40px;
-	list-style: circle;
-}
-
-.admin-bar {
-	display: block;
-}
-.text-center {
-	font-weight:500;
-}
-
-#header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.wrapper {
-	max-width: 1136px;
-	margin: 0 auto;
-}
-
+ @import url("css/globals.css");
+ @import url("css/navigation.css");
+ 
 .header-text {
 	display: flex;
 	justify-content: center;
@@ -174,14 +87,15 @@ ul,ol {
 
 .pre-menu {
 	display: flex;
-    justify-content: center;
+    justify-content: space-between;
 	max-width: 1136px;
 	flex-wrap: wrap;
+	margin-bottom: 30px;
 }
 
 .custom-fields__pre-menu {
 	display: flex;
-    justify-content:center;
+    justify-content:space-between;
 	max-width: 1136px;
 	flex-wrap: wrap;
 	padding-top: 20px;
@@ -193,31 +107,48 @@ ul,ol {
 }
 
 .column:first-child {
-	/*background-color:#65b790;*/
 	position: relative;
 	color: #65b790 !important;
-	/*background-image: url("http://ungeipraksis.dk/wp-content/uploads/2020/01/002-Mynte-og-Lykke-hos-STARK-250x333.jpg");*/
-	background-position: center; 
 	z-index: 4;
-	margin-right: 20px;
 }
 
 .column:nth-child(2) {
 	position: relative;
 	color: #84a27d !important;
-	/*background-image: url("https://ungeipraksis.dk/wp-content/uploads/2021/01/Uddeling-af-kuverter.png");*/
-	background-position: center; 
 	z-index: 2;
-	margin-right: 20px;
 }
 
 .column:nth-child(3) {
 	position: relative;
 	color: #dfa551 !important;
-	/*background-image: url("https://ungeipraksis.dk/wp-content/uploads/2021/01/Indgang-ZBC.png");*/
-	background-position: center; 
-	z-index: 2;
-	
+	z-index: 2;	
+}
+@media (max-width: 900px) {
+	.wrapper {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.container {
+		padding-left: 8px;
+		padding-right:8px;
+	}
+	.pre-menu,
+	.custom-fields__pre-menu {
+		justify-content: center;
+	}
+	.column {
+		margin-right: 10px;
+		width: 47%;	
+	}
+
+	.column h2 {
+		font-size: 1.7rem;
+	}
+}
+/******Backend*******/
+
+textarea {
+	width: 400px;
 }
 
 .content-img {
@@ -249,180 +180,6 @@ blockquote {
 
 .news-header, .no-margin {
 	margin-left:0;
-}
-
-a:link, a:visited, a:hover, a:active {
-	 text-decoration: none;color:#296627;
-}
-
-
-/******* Nav menu burger*******/
-.burger .fa	{
-	display:inline;
-	position: absolute;
-	z-index:5;
-	top:30px;
-	right:70px;
-	color: #000;
-}
-
-.burger .fa:hover {
-	cursor: pointer;
-}
-
-@keyframes fadein {
-	from{opacity:0;}
-	to{opacity:1;}
-}
-
-.container {
-	animation: fadein 1s;
-}
-
-.topnav	{
-	position: fixed;
-	z-index:999;
-	width: 100%;
-	background-color: #333;
-	top: 0;
-	right:0;
-	animation: fadein 0.5s forwards;
-}
-
-.topnav:hover {
-	cursor: pointer;
-}
-
-.menu {
-	height: 1000px;
-}
-
-.topnav .close-btn {
-	position:absolute;
-	right:60px;
-	top: 10px;
-	z-index: 999;
-	color: #000;
-}
-
-.topnav a, cta-btn a {
-	transition: all 1s;
-}
-
-.topnav a:hover {
-	color: #d89c44;
-	position: relative;
-	font-size: 18px;
-}
-
-.nav-menu-outer {
-	background-color: #f2f2f2;
-	max-width: 100%  !important;
-	display: flex;
-	flex-wrap: wrap;
-	height: 600px;
-	align-items: center;
-}
-
-@media (max-width: 900px) {
-	.nav-menu-outer {
-		height: 100%;
-		align-items:unset;
-	}
-}
-
-.nav-inner {
-	max-width: 1136px !important;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 20px;
-	font-size: 1.8rem;
-	font-weight: 200;
-	margin-bottom: 30px;
-	margin: 0 auto;
-	justify-content: center;
-}
-
-@media (max-width: 900px) {
-	.nav-inner {
-		display: block;
-	}
-}
-
-.nav-item-mobile {
-	width: 220px;
-	margin-right: 30px;
-	
-}
-.nav-inner-children a {
-    color:#333;
-	width: 100%;
-}
-
-.sub.nav-inner-children {
-	padding-left: 0px;
-	font-size: 1.1rem;
-	margin-top: 15px;
-	margin-bottom: 30px;
-	line-height: 1.7;
-}
-
-.responsive {position: relative;}
-  
-a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.topnav.responsive a {
-	float: none;
-    display: block;
-    text-align: left;
-}
-
-img.grafics {
-    width:100%;
-}
-      
-.search-form-mobile{
-    background-color:#fff;
-    padding-left:15px;
-    padding-top:15px;
-    padding-bottom:15px;
-    margin-left: 23px;
-    border-bottom: solid grey 0.5px;
-    border-top: solid grey 0.5px;
-}
-
-.active-this {
-   color:white;
-   background-color:#D9853B;
-}
-
-.active-this a{
-	color:white !important;
-}
-
-.overlay {
-	top:0;
-	left:0;
-	width:100%;
-	z-index: 3;
-	height:260px;
-	background:rgba(255, 255, 255,0.4);
-}
-
-
-
-/******* End Syddanmark navmenu***********/
-
-.header-quote {
-	position: absolute;
-	top: 200px;
-	max-width: 500px;
-	color: #e0e0e0;
-	font-size: 16px;
 }
 
 .wp-block-quote {
@@ -487,17 +244,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	font-size: 1.7em !important;
 }
 
-.mobile-body.background-freeze {
- 	position:fixed;
-	display: block;
-	height: 1000px;
-	width: 100%;
-	z-index: 998;
-	background-color:#333;
-	animation: fadein 0.5s forwards;	
-}
-
-
 .admin-links {
 	margin-left:15px;
 }
@@ -514,6 +260,15 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 #post-view {
 	margin-left:10px;
 	width: 100%;
+	
+}
+
+@media (max-width: 700px) {
+	#post-view {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-right: 10px;
+	}
 }
 
 .card-text {
@@ -543,6 +298,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	margin-bottom: 50px;
 	margin-top: 50px;
 }
+
 .parents-subpage__talks {
 	display: flex;
 	width: 100%;
@@ -590,6 +346,28 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
  .green h2{
 	 color: #fff !important;
  }
+
+ .partner-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1136px;
+    margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.partner-container__item {
+	width: 150px;
+	margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+	.partner-container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 
  /********* End forældre og virksomhedsidelayout******/
 
@@ -672,12 +450,17 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	z-index:1;
 	overflow: hidden;
 	max-height: 450px;
+	margin-bottom: 50px;
 }
 video {
 	width: 100%;
-	
-}
+	}
 
+	@media (max-width: 500px) {
+		.video__wrapper img{
+			height: 166px;
+		}	
+	}
 
 .projekt-logo.img-rounded {
     width: 200px;
@@ -744,7 +527,7 @@ video {
 	background-color: #f2f2f2;
 	padding: 20px;	
 	max-width: 1136px;
-	margin: 0 auto;
+	margin: 0 auto 60px;
 }
 
 .fact-box {
@@ -759,6 +542,8 @@ video {
 	max-width: 668px;
 	margin: 0 auto;
 }
+
+
 
 .active {
 	background-color:#d89c44 !important;
@@ -1081,7 +866,7 @@ section.rich_web_timeline_1_62 > article > div.rich_web_timeline_panel .rich_web
 		position: fixed;
 		z-index:999;
 		width: 100%;
-		text-align:center;
+		
 	}
 
 	.menu{

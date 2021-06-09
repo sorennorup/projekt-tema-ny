@@ -24,14 +24,14 @@ class Menu {
 	}
     
 	public function AdvancedBurgerMenu($menu_name){
-		echo '<div class = "nav-menu-outer">'. $this->clean_custom_main_menu(
+		echo '<div class = "nav-menu-outer"><div class = "nav-wrapper">'. $this->clean_custom_main_menu(
 					$menu_name,
 					'nav-inner',
 					'nav-item-mobile',
 					'animate-mobile-item',
 					'nav-inner-children'
 		);
-		echo '</div>';
+		echo '</div></div>';
 	}
 	
 
@@ -135,9 +135,8 @@ class Menu {
 		   			}
 
 					$menu_list .= '<div class = "'.$li_class_name.' sub-item">';
-					$menu_list .= '<a id = '.$id.' href="'.$url.'" class="title">'.$title.'</a>';
+					$menu_list .= '<a id = '.$id.' href="'.$url.'"class="title">'.$title.'</a>';
 					$menu_list .= '</div>';
-
 					// if it's the last child, close the submenu code
 					if ( $menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ){
 					$menu_list .= '</div></div>';
@@ -164,7 +163,7 @@ class Menu {
 } else {
 	 $menu_list .= '<!-- no list defined -->';
 }
-$menu_list .= '</nav>';
+$menu_list .= '<div class = ""></nav>';
 return $menu_list;
 }
 

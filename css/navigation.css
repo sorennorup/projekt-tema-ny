@@ -1,0 +1,162 @@
+/******* Main navigation*******/
+.burger .fa	{
+	display:inline;
+	position: absolute;
+	z-index:5;
+	top:30px;
+	right:70px;
+	color: #000;
+}
+
+.burger .fa:hover {
+	cursor: pointer;
+}
+
+@keyframes fadein {
+	from{opacity:0;}
+	to{opacity:1;}
+}
+
+.container {
+	animation: fadein 1s;
+}
+
+.topnav	{
+	position: fixed;
+	z-index:999;
+	width: 100%;
+	background-color: #333;
+	top: 0;
+	right:0;
+	animation: fadein 1s forwards;
+}
+
+.topnav:hover {
+	cursor: pointer;
+}
+
+.topnav .close-btn {
+	position:absolute;
+	right:60px;
+	top: 10px;
+	z-index: 999;
+	color: #000;
+}
+
+.topnav a, cta-btn a, a:hover::after {
+	transition: all 1s;
+}
+
+.topnav a:hover {
+	color: #d89c44;
+	margin-left: 5px;
+	position: relative;
+}
+
+.nav-menu-outer {
+	background-color: #f2f2f2;
+	max-width: 100%  !important;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+@media (max-width: 900px) {
+	.nav-menu-outer {
+		height: auto;
+	}
+}
+
+.nav-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav-inner {
+	max-width: 1136px !important;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+	font-size: 1.5rem;
+	margin: 0 auto;
+	height: 750px;
+	white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+	.nav-inner {
+		display: block;
+		margin:0 auto;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		margin-bottom: 100px;
+	}
+}
+
+.nav-item-mobile {
+	margin-right: 50px;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+.nav-inner-children a {
+    color:#333;
+	width: 100%;
+}
+
+.sub.nav-inner-children {
+	padding-left: 0px;
+	font-size: 1.1rem;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+	.sub.nav-inner-children {
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+}
+
+.nav-item-mobile:nth-child(5) {
+    margin-right: -30px;
+}
+
+
+.responsive {position: relative;}
+  
+a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav.responsive a {
+	float: none;
+    display: block;
+    text-align: left;
+}
+
+img.grafics {
+    width:100%;
+}
+
+.active-this {
+   color:white;
+   background-color:#D9853B;
+}
+
+.active-this a{
+	color:white !important;
+}
+
+.background-freeze {	
+	overflow: hidden;
+	height: 0;
+}
+
+/******* End main navigation***********/

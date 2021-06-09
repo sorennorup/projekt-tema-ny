@@ -39,6 +39,7 @@ ctaButtonSlideIn = $(function(){
 	flag = true;
 
 	($(".burger").click(function(){
+		  
 		deactivateBackground(flag);
 		$('.topnav').show();
 		flag = false;
@@ -47,6 +48,7 @@ ctaButtonSlideIn = $(function(){
 
 	$(".close-btn").click(function(){
 		deactivateBackground(flag);
+
 		flag = true;
 		$('.topnav').hide();
 		$('.burger').show();
@@ -85,10 +87,10 @@ function slideOut(obj,screenW){
 const newLocal = '10000px';
 function deactivateBackground(bol){
 	if(bol === true){
-		$('.mobile-body').addClass('background-freeze');
+		$('body').addClass('background-freeze');
 		}
 	else if(bol === false){
-		$('.mobile-body').removeClass('background-freeze');
+		$('body').removeClass('background-freeze');
 		
 	}
 }

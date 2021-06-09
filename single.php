@@ -28,12 +28,7 @@ get_header(); ?>
             
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="container container-height">
-  <!-- PROJEKT MENU-->
-  
-	
-  <!-- END PROJEKT MENU-->
-  <br/>
+			<div class="container">
   <?php echo  '<div class = "title-wrapper"><h1>'.get_the_title().'</h1>
   </div>';?>
    <?php BreadCrumbs::the_breadcrumb(); ?>
