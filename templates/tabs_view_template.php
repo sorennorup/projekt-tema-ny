@@ -14,14 +14,13 @@
   <!-- PROJEKT MENU-->
   
   <!-- END PROJEKT MENU-->
-<div class="row">
+
 <?php echo '<h1 style = "margin-left: 15px;margin-top:20px;">'.get_the_title().'</h1>';?>
 <div class="col-lg-12 content-main" >
-	<div class = "row">
-		<div class = "container mb-4">
+		
 		<?php BreadCrumbs::the_breadcrumb(); ?>
 			<?php the_content(); ?>
-		</div>
+		
 		<?php  $args = array();?>
 		<?php
 	if( $post->ID == 25 ){
@@ -51,22 +50,13 @@
 	}
 		$postView = new PostView();
 		$postView->displayAjaxPosts($args); ?>
-	</div>
 </div>
   
  <!-- The sponser view     --> 
  
 </div>
 <hr/>
-<div class = "row">
-  <div class="col-sm-12"><h5>Med støtte fra</h5></div>
-  </div>
-
-<div class = "row">
-<div class="col-sm-2 sponsor-logo"><?php dynamic_sidebar( 'UPS sponsorer' ); ?></div>
-<div class="col-sm-4"></div>
-<div class="col-sm-4"></div>
-</div>
+<div class = "pre-footer"><span>Med støtte fra </span><?php dynamic_sidebar( 'UPS sponsorer' ); ?></div>
   <!-- End the sponser view  -->  
  
 </div>

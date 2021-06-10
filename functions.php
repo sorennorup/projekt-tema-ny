@@ -652,21 +652,22 @@ function cont_callback($post) {
 	$res = get_post_meta( $post->ID,'_meta_answer',true);
 	$selected = ' selected="selected" ';
 	echo '<label for="use thumb for hero">';
-	_e( 'Vælg', 'myplugin_textdomain' );
 	echo '</label> ';
 	?>
    <select name="answer" id="answer">;
-		<option value = "0" <?php if($res=='0') echo $selected;?>>Dont use thumb</option>
-		<option value = "1" <?php if($res=='1') echo $selected; ?> >Use thumb</option>
+		<option value = "0" <?php if($res=='0') echo $selected;?>>Brug ikke billede</option>
+		<option value = "1" <?php if($res=='1') echo $selected; ?> >Brug billede</option>
 	</select>
+	
 	<?php 
+	echo '<p>Hvis "brug ikke billede" er valgt, vises et random billede</p>';
    }
 
 function add_box(){
     $screens = array('post','page');
 	add_meta_box(
            "box_id",
-           "Brug thumb som hero",
+           "Brug udvalgt billede i header",
            "cont_callback",
            $screens,
 		   "side",

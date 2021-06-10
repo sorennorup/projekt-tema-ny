@@ -32,10 +32,10 @@ get_header(); ?>
   <?php echo  '<div class = "title-wrapper"><h1>'.get_the_title().'</h1>
   </div>';?>
    <?php BreadCrumbs::the_breadcrumb(); ?>
-<div class="row main-row">
+<div class="container">
 
-<div class = "col-lg-2"></div>
-<div class="col-sm-8 main-con ">
+
+<div class="main-con ">
 	 
 	
      <?php //if (has_post_thumbnail( $post->ID ) ): ?>
@@ -49,12 +49,14 @@ get_header(); ?>
 
     </div>
 
- <div class = "col-lg-2"></div>
+ 
 
 </div>
 <hr/>
 <?php echo '<h1 > Nyheder </h1>'; ?>
 <?php echo do_shortcode('[sc]'); ?>
+<a style = "float: right;" href = "<?php echo get_home_url().'/nyheder'; ?>">Læs flere nyheder</a>
+<br/>
 <hr/>
 <div class = "footer-before">
   <div class="footer-before__row"><h5>Med støtte fra</h5><?php dynamic_sidebar( 'UPS sponsorer' ); ?></div>

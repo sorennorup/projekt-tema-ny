@@ -91,7 +91,10 @@ class PostView {
 	public function displayAjaxPosts($attr = array()){
 		//print_r($attr);
 		$output = "";
-		?> <ul class="nav nav-tabs">     <?php
+		
+		?> 
+		<div class = "nav-tabs-wrapper">
+		<ul class="nav nav-tabs">     <?php
 		$count = 0;
 		foreach ($attr as $menu_item){
 			if( $count === 0 ){
@@ -107,6 +110,7 @@ class PostView {
 		}
 ?>
 		</ul>
+		</div>
 		<!-- Renders all the posts with a certain category -->
 	 	<div id = "post-view"></div> 
 <script>
