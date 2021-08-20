@@ -515,7 +515,7 @@ video {
 	margin-bottom: 20px;
 	position: relative;
 	background-color: #f2f2f2;
-	padding: 20px;	
+	padding: 10px;	
 	max-width: 1136px;
 	margin: 0 auto 60px;
 }
@@ -672,8 +672,19 @@ footer {
 }
 
 /* Team membersite styling */
+.tc_team-members {
+    clear: both;
+    min-height: 250px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	size: none;
+}
+
+
 .tc_team-member{
-	width: 200px !important;
+	max-width: 250px !important;
 	margin-right: 30px !important;
 }
 
