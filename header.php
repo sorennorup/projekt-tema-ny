@@ -70,7 +70,8 @@
 			<?php if(is_front_page()){ ?>
 				<div class = "header-text__wrapper">
 				<div class = "header-text">
-<h1>Projekt Unge i praksis sender unge i 7. klasse på en rejse ud i arbejdsliv</h1></div>
+					<?php dynamic_sidebar('Home right sidebar3'); ?>
+</div>
 				</div>
 				<div class = "video__wrapper" >
 				
